@@ -94,7 +94,8 @@ class CfgNotifications
 class RscTitles 
 	{
 		#include "scripts\vehicle\crew\namesleft.hpp"	// Occupants HUD for vehicles
-	};
+	};	
+
 //------------------------- Parameters
 
 class Params 
@@ -107,20 +108,6 @@ class Params
 			values[] = {0};
 			texts[] = {""};
 			default = 0;
-		};
-		
-		class MainEnemyFaction {
-			title = "Main Enemy Faction (Not Working Yet)";
-			values[] = {1,2,3,4,5,6,7};
-			texts[] = {"CSAT","CSAT Tropic","AAF","ParaMillitary","Bandits","FIA Independent","FIA Opfor"};
-			default = 2;
-		};
-		
-		class SecondaryEnemyFaction {
-			title = "Secondary Enemy Faction (Not Working Yet)";
-			values[] = {1,2,3,4,5,6,7};
-			texts[] = {"CSAT","CSAT Tropic","AAF","ParaMillitary","Bandits","FIA Independent","FIA Opfor"};
-			default = 4;
 		};
 		
 		class VehicleRespawnDistance {
@@ -143,18 +130,11 @@ class Params
 			default = 600; // 300 default
 		};
 		
-		class ArsenalFilter {
-			title = "Filter mode of the arsenal";
-			texts[] = {"Arsenal disabled", "Arsenal enabled but filtered", "Arsenal enabled"};
-			values[] = {0, 1, 2};
+		class RestrictedItems {
+			title = "Restrict Items to appropriate classes";
+			values[] = {0,1};
+			texts[] = {"DISABLED","ENABLED"};
 			default = 1;
-		};
-		
-		class Fatigue {
-			title = "Enable Fatigue";
-			texts[] = {"Yes","No"};
-			values[] = {0, 1};
-			default = 0;
 		};
 
 		class title2
@@ -177,6 +157,13 @@ class Params
 			values[] = {200,300,400,500,600,700,800,900,1000};
 			texts[] = {"200m","300m","400m","500m","600m","700m","800m","900m","1,000m"};
 			default = 800;
+		};
+		
+		class Fatigue {
+			title = "Player Fatigue";
+			values[] = {0,1};
+			texts[] = {"DISABLED","ENABLED"};
+			default = 1;
 		};
 
 		class AntiAirAmount {

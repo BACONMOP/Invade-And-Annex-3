@@ -9,21 +9,17 @@ _null = [] execVM "scripts\pilotCheck.sqf"; 									// pilots only
 
 //------------------- Restrictions and arsenal
 
-#include "defines\arsenalDefines.hpp"
-if ("ArsenalFilter" call BIS_fnc_getParamValue == 1) then {
-        player addEventHandler ["Take", {
-            params ["_unit", "_container", "_item"];
+if (PARAMS_RestrictedItems == 1) then {
+	player addEventHandler ["Take", {
+		params ["_unit", "_container", "_item"];
+		[_unit, 1, _item, _container] call derp_fnc_gearLimitations;
+	}];
+	player addEventHandler ["InventoryClosed", {
+		params ["_unit"];
+		[_unit, 0] call derp_fnc_gearLimitations;
+	}];
+};
 
-            [_unit, 1, _item, _container] call derp_fnc_gearLimitations;
-        }];
-
-        player addEventHandler ["InventoryClosed", {
-            params ["_unit"];
-
-            [_unit, 0] call derp_fnc_gearLimitations;
-        }];
-    };
-[ArsenalBoxes, ("ArsenalFilter" call BIS_fnc_getParamValue)] call derp_fnc_VA_filter; // Init arsenal boxes.
 //------------------- Disable Arty Computer for all but FSG
 enableEngineArtillery false;
 if (player isKindOf "B_support_Mort_f") then {

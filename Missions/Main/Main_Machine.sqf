@@ -76,7 +76,7 @@ while {missionActive} do {
 	waitUntil {sleep 5;subObjComplete == 1;};
 	
 	// Helicopter reinforcements when side is completed.
-	_heliReinf = [currentAO, "airCavSpawnMarker", secondaryMainFaction] call AW_fnc_airCav;
+	_heliReinf = [currentAO, "airCavSpawnMarker", "paraMil"] call AW_fnc_airCav;
 	
 	
 	waitUntil {sleep 5;(count list _dt < PARAMS_EnemyLeftThreshhold)};

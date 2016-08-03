@@ -41,9 +41,7 @@ private _AISkillUnitsArray = [];
 if (_AAAVehcSetting) then {
     for "_x" from 1 to _AAAVehcAmount do {
         private _randomPos = [[[_AOpos, (_radiusSize / 1.5)], []], ["water", "out"]] call BIS_fnc_randomPos;
-		
-		_AAVicList = (missionconfigfile >> "unitList" >> MainFaction >> "AAvic") call BIS_fnc_getCfgData;
-        private _AAVehicle = (selectRandom _AAVicList) createVehicle _randomPos;
+        private _AAVehicle = (selectRandom AAVehicleList) createVehicle _randomPos;
 
         _AAVehicle allowCrewInImmobile true;
 
@@ -67,7 +65,6 @@ if (_AAAVehcSetting) then {
 if (_MRAPSetting) then {
     for "_x" from 1 to _MRAPAmount do {
         private _randomPos = [[[_AOpos, _radiusSize], []], ["water", "out"]] call BIS_fnc_randomPos;
-		_MRAPList = (missionconfigfile >> "unitList" >> MainFaction >> "cars") call BIS_fnc_getCfgData;
         private _MRAP = (selectRandom MRAPList) createVehicle _randompos;
 
         _MRAP allowCrewInImmobile true;
@@ -91,8 +88,7 @@ if (_MRAPSetting) then {
 if (_randomVehcsSetting) then {
     for "_x" from 1 to _randomVehcsAmount do {
         private _randomPos = [[[_AOpos, _radiusSize], []], ["water", "out"]] call BIS_fnc_randomPos;
-		_RandomVehicleList = (missionconfigfile >> "unitList" >> MainFaction >> "APCs") call BIS_fnc_getCfgData;
-        private _vehc = (selectRandom _RandomVehicleList) createVehicle _randompos;
+        private _vehc = (selectRandom RandomVehicleList) createVehicle _randompos;
 
         _vehc allowCrewInImmobile true;
         _vehc lock 2;
@@ -113,13 +109,8 @@ if (_randomVehcsSetting) then {
 if (_infantryGroupsSetting) then {
     for "_x" from 1 to _infantryGroupsAmount do {
         private _randomPos = [[[_AOpos, _radiusSize * 1.2], []], ["water", "out"]] call BIS_fnc_randomPos;
-		private _infantryGroup = createGroup EAST;
-		for "_x" from 1 to 8 do {
-			_unitArray = (missionconfigfile >> "unitList" >> MainFaction >> "units") call BIS_fnc_getCfgData;
-			_unit = _unitArray call BIS_fnc_selectRandom;
-			_grpMember = _infantryGroup createUnit [_unit, _randomPos, [], 0, "FORM"];
-		};
-		
+        private _infantryGroup = [_randomPos, EAST, (configfile InfantryGroupsCFGPATH (selectRandom InfantryGroupList))] call BIS_fnc_spawnGroup;
+
         [_infantryGroup, _AOpos, _radiusSize / 1.6] call AW_FNC_taskPatrol;
 
         {
@@ -163,13 +154,7 @@ if (_ATGroupsSetting) then {
 if (_urbanInfantrySetting) then {
     for "_x" from 1 to _urbanInfantryAmount do {
 
-	
-		private _group = createGroup EAST;
-		for "_x" from 1 to 8 do {
-			_unitArray = (missionconfigfile >> "unitList" >> MainFaction >> "units") call BIS_fnc_getCfgData;
-			_unit = _unitArray call BIS_fnc_selectRandom;
-			_grpMember = _group createUnit [_unit, _AOpos, [], 0, "FORM"];
-		};
+        private _group = [_AOpos, east, (configfile UrbanGroupsCFGPATH (selectRandom UrbanGroupsList))] call BIS_fnc_spawnGroup;
         private _returnedUnits = [_AOpos, nil, (units _group), (_radiusSize / 3), 2, false] call derp_fnc_AIOccupyBuilding;
 
         { deleteVehicle _x } foreach _returnedUnits;
@@ -189,13 +174,8 @@ if (_milbuildingInfantry) then {
     if (_milBuildingCount > 0 ) then {
 
         for "_x" from 1 to 3 do {
-			
-			private _group = createGroup EAST;
-			for "_x" from 1 to 8 do {
-				_unitArray = (missionconfigfile >> "unitList" >> MainFaction >> "units") call BIS_fnc_getCfgData;
-				_unit = _unitArray call BIS_fnc_selectRandom;
-				_grpMember = _group createUnit [_unit, _AOpos, [], 0, "FORM"];
-			};
+
+            private _group = [_AOpos, east, (configfile UrbanGroupsCFGPATH (selectRandom UrbanGroupsList))] call BIS_fnc_spawnGroup;
             private _returnedUnits= [_AOpos, MilitaryBuildings, (units _group), (_radiusSize + 100), 2, false] call derp_fnc_AIOccupyBuilding;
 
             { deleteVehicle _x } foreach _returnedUnits;

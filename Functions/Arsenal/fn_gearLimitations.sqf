@@ -23,6 +23,7 @@ _restrictedItems pushBack GearLimitationSniper;
 _restrictedItems pushBack GearLimitationMMG;
 _restrictedItems pushBack GearLimitationUAVOperator;
 _restrictedItems pushBack GearLimitationGrenadier;
+_restrictedItems pushBack GearLimitationGitGud;
 _restrictedItems pushBack [{_unit getUnitTrait 'gud'}, (ArsenalBlacklistedItems + ArsenalBlacklistedUniforms + ArsenalBlacklistedHelmets + ArsenalBlacklistedBackpacks + ArsenalBlacklistedVests), "This is blacklisted"];
 
 private _assignedItems = assignedItems _unit;

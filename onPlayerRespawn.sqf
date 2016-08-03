@@ -16,19 +16,19 @@ private ["_iampilot"];
 
 //=========================== Fatigue setting
 
-if (PARAMS_Fatigue == 1) then {player enableFatigue FALSE;};
+if (PARAMS_Fatigue == 0) then {player enableFatigue FALSE;};
 
-//=========================== Respawn Gear
+//=========================== Restrictions
 
-
-if !(player getVariable ["derp_revive_downed", false]) then {
-    if (!isNil {player getVariable "derp_savedGear"}) then {
-        player setUnitLoadout [(player getVariable "derp_savedGear"), true];
-    } else {
-        if (!isNil {player getVariable "derp_revive_loadout"}) then {
-            player setUnitLoadout [(player getVariable "derp_revive_loadout"), true];
-        };
-    };
+if (PARAMS_RestrictedItems == 1) then {
+	addActionRestrictions = '
+		params ["_target", "", "", "", "_action", "", "", "", "", "", "_event"];
+		[player, 0] call derp_fnc_gearLimitations;
+		false
+	';
+	inGameUISetEventHandler ["Action", addActionRestrictions];
+	inGameUISetEventHandler ["PrevAction", addActionRestrictions];
+	inGameUISetEventHandler ["NextAction", addActionRestrictions];
 };
 
 //=========================== PILOTS ONLY

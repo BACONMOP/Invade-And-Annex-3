@@ -1,663 +1,1402 @@
 class AOs{
 	
-	class Imuri_Island {
-		name =  "Imuri Island";
+	class AAC_Airfield {
+		name =  "AAC Airfield";
 		nearlocations[]={
-			"Lailai",
-			"Dr_Steve_Zissou_Center_For_Aquatic_Excellence",
-			"Blerick",
-			"Yanukka"
+			"Melanera_Bay",
+			"Therisa",
+			"Katalaki",
+			"Katalaki_Penninsula",
+			"Faronaki"
 		};
-		type = "Outpost";
+		type = "Base";
+		respawnPos = "aac_pl_res";
+		visMrkr = "FOB_Martian";
+		vehicles[] = 
+		{
+			{"I_Plane_Fighter_03_AA_F", "aac_jet_spawn",1800},
+			{"I_Heli_light_03_unarmed_F", "aac_heli1",450},
+			{"I_Heli_light_03_unarmed_F", "aac_heli2",450},
+			{"I_Heli_Transport_02_F", "aac_heli3",300},
+			{"B_MRAP_01_hmg_F", "aac_veh1",300},
+			{"B_MRAP_01_gmg_F", "aac_veh2",300},
+			{"B_Truck_01_ammo_F", "aac_veh3",700},
+			{"B_APC_Wheeled_01_cannon_F", "aac_veh4",1200},
+			{"B_APC_Wheeled_01_cannon_F", "aac_veh5",1200},
+			{"B_APC_Tracked_01_AA_F", "aac_veh6",1200}
+		};
+	};
+	
+	
+	class Base {
+		name =  "Camp Landfell";
+		nearlocations[]={
+			"Skopos",
+			"Cap_Makrinos",
+		};
+		type = "MainBase";
+		vehicles[] = {};
+	};	
+	
+	class Skopos {
+		name =  "Skopos";
+		nearlocations[]={
+			"Cap_Makrinos",
+			"Castle_Ruins",
+			"Vikos_Outpost",
+			"Melanera_Bay"
+		};
+		type = "Hill";
 		vehicles[] = {};
 	};
-	class Lailai {
-		name =  "Lailai";
+	
+	class Cap_Makrinos {
+		name =  "Cap Makrinos";
 		nearlocations[]={
-			"Imuri_Island",
-			"Bacons_Mound",
-			"Moddergat",
-			"KatKoula",
-			"Yanukka"
+			"Skopos",
+			"Castle_Ruins",
+			"Vikos_Outpost",
+			"Faronaki"
+		};
+		type = "Coastline";
+		vehicles[] = {};
+	};
+	
+	class Castle_Ruins {
+		name =  "Castle Ruins";
+		nearlocations[]={
+			"Skopos",
+			"Cap_Makrinos",
+			"Vikos_Outpost",
+			"Melanera_Bay",
+			"Zaros_PowerPlant"
+		};
+		type = "Hill";
+		vehicles[] = {};
+	};
+	
+	class Vikos_Outpost {
+		name =  "Vikos Outpost";
+		nearlocations[]={
+			"Skopos",
+			"Castle_Ruins",
+			"Cap_Makrinos",
+			"Faronaki"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
 	
-	class base {
-		name =  "Base";
+	class Melanera_Bay {
+		name =  "Melanera Bay";
 		nearlocations[]={
-			"Yanukka",
-			"Imuri_Island",
-			"Bacons_Mound",
-			"Dr_Steve_Zissou_Center_For_Aquatic_Excellence",
-			"Rautake"
+			"Castle_Ruins",
+			"Vikos_Outpost",
+			"Therisa",
+			"Zaros",
+			"Therisa",
+			"Zaros_PowerPlant",
+			"AAC_Airfield"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Bacons_Mound {
-		name =  "Bacons Mound";
+	
+	class Therisa {
+		name =  "Therisa";
 		nearlocations[]={
-			"KatKoula",
-			"Dr_Steve_Zissou_Center_For_Aquatic_Excellence",
-			"Blerick",
-			"Namuvaka"
+			"Melanera_Bay",
+			"AAC_Airfield",
+			"Zaros",
+			"Katalaki",
+			"Katalaki_Penninsula"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class KatKoula {
-		name =  "KatKoula";
+	
+	class Zaros {
+		name =  "Zaros";
 		nearlocations[]={
-			"Moddergat",
-			"Dr_Steve_Zissou_Center_For_Aquatic_Excellence",
-			"Rautake",
-			"Balavu"
+			"Melanera_Bay",
+			"Therisa",
+			"Zaros_PowerPlant",
+			"Edessa",
+			"Xirolimni_Dam"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Yanukka {
-		name =  "Yanukka";
+	
+	class Zaros_PowerPlant {
+		name =  "Zaros Power Plant";
 		nearlocations[]={
-			"Namuvaka",
-			"Dr_Steve_Zissou_Center_For_Aquatic_Excellence",
-			"KatKoula",
-			"Bacons_Mound"
+			"Xirolimni_Dam",
+			"Edessa",
+			"Castle_Ruins",
+			"A_Dump",
+			"Zaros"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Namuvaka {
-		name =  "Namuvaka";
+	
+	class Edessa {
+		name =  "Edessa";
 		nearlocations[]={
-			"Lailai",
-			"Dr_Steve_Zissou_Center_For_Aquatic_Excellence",
-			"Blerick",
-			"Rautake",
-			"Tavu"
+			"Zaros",
+			"Zaros_PowerPlant",
+			"Panochori",
+			"Panochori_Bay",
+			"A_Dump"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Dr_Steve_Zissou_Center_For_Aquatic_Excellence {
-		name =  "Dr Steve Zissou Center For Aquatic Excellence";
+
+	class Panochori {
+		name =  "Panochori";
 		nearlocations[]={
-			"Namuvaka",
-			"Balavu",
-			"Tavu",
-			"Railway_Depot",
-			"Yanukka"
+			"A_Dump",
+			"Panochori_Bay",
+			"Athanos",
+			"Neri",
+			"Neri_Bay",
+			"Edessa"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Tavu {
-		name =  "Tavu";
+	
+	class Panochori_Bay {
+		name =  "Panochori Bay";
 		nearlocations[]={
-			"Namuvaka",
-			"Balavu",
-			"Railway_Depot",
-			"Dr_Steve_Zissou_Center_For_Aquatic_Excellence",
-			"Sosovu",
-			"Rautake"
+			"Panochori",
+			"Athanos",
+			"Neri",
+			"Neri_Bay"
+			
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Balavu {
-		name =  "Balavu";
+	
+	class Athanos {
+		name =  "Athanos";
 		nearlocations[]={
-			"Namuvaka",
-			"Tavu",
-			"Railway_Depot",
-			"Dr_Steve_Zissou_Center_For_Aquatic_Excellence",
-			"Sosovu",
-			"Rautake"
+			"Panochori",
+			"Panochori_Bay",
+			"Athanos",
+			"Neri",
+			"Neri_Bay"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Rautake {
-		name =  "Rautake";
+	
+	class Neri_Bay {
+		name =  "Neri_Bay";
 		nearlocations[]={
-			"Namuvaka",
-			"Tavu",
-			"Railway_Depot",
-			"Dr_Steve_Zissou_Center_For_Aquatic_Excellence",
-			"Sosovu",
-			"KatKoula"
+			"Panochori",
+			"Panochori_Bay",
+			"Athanos",
+			"Neri",
+			"Quarry"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Sosovu {
-		name =  "Sosovu";
+	
+	class Neri {
+		name =  "Neri";
 		nearlocations[]={
-			"Railway_Depot",
-			"Belfort",
-			"Dr_Steve_Zissou_Center_For_Aquatic_Excellence",
-			"Tuvanaka",
-			"Tuvanaka_Airbase",
-			"Vehicle_Range",
-			"Georgetown"
+			"Panochori",
+			"Panochori_Bay",
+			"Athanos",
+			"Neri_Bay",
+			"Quarry",
+			"A_Dump"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Belfort {
-		name =  "Belfort";
+	
+	class Quarry {
+		name =  "Quarry";
 		nearlocations[]={
-			"Tuvanaka",
-			"Tuvanaka_Airbase",
-			"Vehicle_Range",
-			"Georgetown",
-			"Sosovu",
-			"Saint_Julian"
+			"Panochori",
+			"Neri_Bay",		
+			"A_Dump",
+			"Aggelochori_Outskirts"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Tuvanaka {
-		name =  "Tuvanaka";
+	
+	class A_Dump {
+		name =  "A Dump";
 		nearlocations[]={
-			"Tuvanaka_Airbase",
-			"Vehicle_Range",
-			"Georgetown",
-			"Sosovu",
-			"Saint_Julian",
-			"Belford"
+			"Zaros",
+			"Zaros_PowerPlant",
+			"Edessa",
+			"Aggelochori_Outskirts",
+			"Panochori"
+			
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Tuvanaka_Airbase {
-		name =  "Tuvanaka Airbase";
+	
+	class Aggelochori_Outskirts {
+		name =  "Aggelochori Outskirts";
 		nearlocations[]={
-			"Tuvanaka",
-			"Vehicle_Range",
-			"Georgetown",
-			"Sosovu",
-			"Saint_Julian",
-			"Belford"
+			"Aggelochori_Factory",
+			"A_Dump",
+			"Quarry",
+			"Stadium",
+			"Power_Plant"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	
+	class Aggelorchori_Factory {
+		name =  "Aggelorchori Factory";
+		nearlocations[]={
+			"Stadium",
+			"Power_Plant",
+			"Negadas",
+			"Aggelochori_Outskirts"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	
+	class Stadium {
+		name =  "Stadium";
+		nearlocations[]={
+			"Stadium",
+			"Power_Plant",
+			"Negadas",
+			"Aggelochori_Factory",
+			"Topolia",
+			"Agia_Stemma"
 		};
 		type = "Base";
-		respawnPos = "tuv_air_pl_res";
-		visMrkr = "FOB_Eagle"
-		vehicles[] = {
-			{"I_Plane_Fighter_03_AA_F", "tuv_air_jet",1800},
-			{"I_Heli_light_03_unarmed_F", "tuv_air_heli1",450},
-			{"I_Heli_light_03_unarmed_F", "tuv_air_heli2",450},
-			{"B_T_LSV_01_armed_F", "tur_air_veh1",300},
-			{"B_T_LSV_01_armed_F", "tur_air_veh2",300},
-			{"B_T_Truck_01_ammo_F", "tuv_air_veh3",700},
-			{"B_T_APC_Wheeled_01_cannon_F", "tuv_air_veh4",1200},
-			{"B_T_APC_Wheeled_01_cannon_F", "tuv_air_veh5",1200},
-			{"B_T_APC_Tracked_01_AA_F", "tuv_air_veh6",1200}
+		respawnPos = "sdm_pl_res";
+		visMrkr = "FOB_Marathon";
+		vehicles[] = 
+		{
+			{"B_Heli_Light_01_armed_F", "sdm_heli1",1200},
+			{"B_Heli_Light_01_F", "sdm_heli2",1200},
+			{"B_MRAP_01_hmg_F", "sdm_veh1",300},
+			{"B_MRAP_01_gmg_F", "sdm_veh2",300},
+			{"B_Truck_01_fuel_F", "sdm_veh3",450},
+			{"B_MRAP_01_hmg_F", "sdm_veh4",300},
+			{"B_MRAP_01_gmg_F", "sdm_veh5",300},
+			{"O_APC_Tracked_02_cannon_F", "sdm_veh6",600}
 		};
 	};
-	class Vehicle_Range {
-		name =  "Vehicle Range";
+	
+	class Power_Plant {
+		name =  "Power Plant";
 		nearlocations[]={
-			"Tuvanaka",
-			"Georgetown",
-			"Sosovu",
-			"Saint_Julian",
-			"Belford",
-			"Railway_Depot",
-			"Tuvanaka_Airbase"
+			"Stadium",
+			"Negadas",
+			"Aggelochori_Factory",
+			"Agios_Konstantinos"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Arch_Of_The_Spartans {
-		name =  "Arch Of The Spartans";
+	
+	class Negadas {
+		name =  "Negadas";
 		nearlocations[]={
-			"Ipota",
-			"Vehicle_Range",
-			"La_Rochelle",
-			"Penelo",
-			"La_Rochelle_Aerodome"
+			"Power_Plant",
+			"Stadium",
+			"Topolia",
+			"Kore",
+			"Kira"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Ipota {
-		name =  "Ipota";
+	
+	class Kira {
+		name =  "Kira";
 		nearlocations[]={
-			"Vehicle_Range",
-			"La_Rochelle",
-			"Penelo",
-			"La_Rochelle_Aerodome",
-			"Blue_Pearl_industrial_Port" 
+			"Agios_Konstantinos",
+			"Agios_Konstantinos_Turbines",
+			"Gori_Woods",
+			"Kore"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Rereki {
-		name =  "Rereki";
+	
+	class Agios_Konstantinos {
+		name =  "Agios_Konstantinos";
 		nearlocations[]={
-			"Lijnhaven",
-			"Belrick",
-			"Girz_Pass",
-			"Moddergat",
-			"Doodstil",
-			"Harcourt",
-			"Marsh_Of_The_Muck_Duck",
-			"KatKoula"
+			"Agios_Konstantinos_Turbines",
+			"Gori_Woods",
+			"Kore",
+			"Kira",
+			"Negadas"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Lijnhaven {
-		name =  "Lijnhaven";
+	
+	class Agios_Konstantinos_Turbines {
+		name =  "Agios Konstantinos Turbines";
 		nearlocations[]={
-			"Belrick",
-			"Girz_Pass",
-			"Moddergat",
-			"Doodstil",
-			"Harcourt",
-			"Marsh_Of_The_Muck_Duck",
-			"KatKoula",
-			"Rereki"
+			"Agios_Konstantinos",
+			"Gori_Woods",
+			"Kira",
+			"Dump_Station",
+			"Oreokastro"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	
+	class Oreokastro {
+		name =  "Oreokastro";
+		nearlocations[]={
+			"Synneforos",
+			"Gori_Woods",
+			"Dump_Station",
+			"Faros",
+			"Agios_Konstantinos_Turbines"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	
+	class Synneforos {
+		name =  "Synneforos";
+		nearlocations[]={
+			"Oreokastro",
+			"Faros",
+			"Adbera_Turbines",
+			"Abdera_Airstrip",
+			"Dump_Station"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	
+	class Faros {
+		name =  "Faros";
+		nearlocations[]={
+			"Oreokastro",
+			"Synneforos",
+			"Adbera_Turbines",
+			"Abdera_Airstrip",
+			"Ammolofi_Bay",
+			"Krya_Nera"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	
+	class Abdera_Airstrip {
+		name =  "Abdera Airstrip";
+		nearlocations[]={"Synneforos",
+			"Adbera_Turbines",
+			"Abdera_Airstrip",
+			"Ammolofi_Bay",
+			"Krya_Nera",
+			"Adbera"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	
+	class Adbera_Turbines {
+		name =  "Adbera Turbines";
+		nearlocations[]={
+			"Faros",
+			"Synneforos",
+			"Abdera_Airstrip",
+			"Ammolofi_Bay",
+			"Krya_Nera",
+			"Adbera"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Feres_Town {
+		name =  "Feres Town";
+		nearlocations[]={
+			"Selakano_Town",
+			"Selakano_Windmills",
+			"Panagia_Town",
+			"Livadi_Bay"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Selakano_Town {
+		name =  "Selakano Town";
+		nearlocations[]={
+			"Feres_Town",
+			"Selakano_Windmills",
+			"Panagia_Town",
+			"Livadi_Bay"
 		};
 		type = "Base";
-		respawnPos = "lijn_pl_res";
-		visMrkr = "FOB_Fin"
-		vehicles[] = {
-			{"B_T_Boat_Armed_01_minigun_F", "lijn_boat1",300}, ///REQUIRES classnames changes!!!!
-			{"B_T_Boat_Transport_01_F", "ljin_boat2",300},
-			{"B_T_Boat_Transport_01_F", "ljin_boat3",700},
-			{"B_T_Boat_Armed_01_minigun_F", "ljin_boat4",1200},
-			{"B_SDV_01_F", "ljin_sub1",1200},
-			{"B_SDV_01_F", "ljin_sub2",1200}
+		respawnPos = "Sel_pl_res";
+		visMrkr = "FOB_Dirt_Track";
+		vehicles[] = 
+		{
+			{"O_Heli_Attack_02_black_F", "sel_heli1",5400},
+			{"B_Heli_Transport_03_F", "sel_heli2",300},
+			{"B_MRAP_01_hmg_F", "sel_veh1",300},
+			{"B_MRAP_01_gmg_F", "sel_veh2",300},
+			{"B_Truck_01_transport_F", "sel_veh3",300},
+			{"B_APC_Wheeled_01_cannon_F", "sel_veh4",600},
+			{"B_APC_Wheeled_01_cannon_F", "sel_veh5",600},
+			{"B_MBT_01_cannon_F", "sel_veh6",1200}
 		};
 	};
-	class Belrick {
-		name =  "Belrick";
+	class Selakano_Windmills {
+		name =  "Selakano Windmills";
 		nearlocations[]={
-			"Lijnhaven",
-			"Girz_Pass",
-			"Moddergat",
-			"Doodstil",
-			"Harcourt",
-			"Marsh_Of_The_Muck_Duck",
-			"KatKoula",
-			"Rereki"
-		};
-		type = "Outpost";
-		vehicles[] = {};
-	};
-	class Moddergat {
-		name =  "Moddergat";
-		nearlocations[]={
-			"Lijnhaven",
-			"Girz_Pass",
-			"Doodstil",
-			"Harcourt",
-			"Marsh_Of_The_Muck_Duck",
-			"KatKoula",
-			"Belrick",
-			"Rereki",
-			"Oumere"
+			"Feres_Town",
+			"Selakano_Town",
+			"Panagia_Town",
+			"Livadi_Bay"
+		
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Harcourt {
-		name =  "Harcourt";
+	class Panagia_Town {
+		name =  "Panagia Town";
 		nearlocations[]={
-			"Lijnhaven",
-			"Girz_Pass",
-			"Doodstil",
-			"Marsh_Of_The_Muck_Duck",
-			"KatKoula",
-			"Belrick",
-			"Rereki",
-			"Oumere",
-			"Moddergat"
+			"Feres_Town",
+			"Selakano_Town",
+			"Livadi_Bay",
+			"Aktinarki",
+			"Didymos_Valley",
+			"Faronaki_Col"
+			
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Doodstil {
-		name =  "Doodstil";
+	class Livadi_Bay {
+		name =  "Livadi Bay";
 		nearlocations[]={
-			"Lijnhaven",
-			"Girz_Pass",
-			"Doodstil",
-			"Marsh_Of_The_Muck_Duck",
-			"KatKoula",
-			"Belrick",
-			"Rereki",
-			"Oumere",
-			"Moddergat",
-			"Harcourt"
+			"Feres_Town",
+			"Selakano_Town",
+			"Aktinarki",
+			"Didymos_Valley",
+			"Faronaki_Col",
+			"Selakano_Windmills",
+			"Didymos_Plain"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Girz_Pass {
-		name =  "Girz Pass";
+	class Didymos_Valley {
+		name =  "Didymos Valley";
 		nearlocations[]={
-			"Lijnhaven",
-			"Doodstil",
-			"Marsh_Of_The_Muck_Duck",
-			"KatKoula",
-			"Belrick",
-			"Rereki",
-			"Oumere",
-			"Moddergat",
-			"Harcourt",
-			"Doodstil"
+			"Selakano_Windmills",
+			"Didymos_Plain",
+			"Faronaki_Col",
+			"Livadi_Bay",
+			"Panagia_Town",
+			"Faronaki_Quarry"	
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Marsh_Of_The_Muck_Duck {
-		name =  "Marsh Of The Muck Duck";
+	class Didymos_Plain {
+		name =  "Didymos Plain";
 		nearlocations[]={
-			"Harcourt",
-			"Oumere",
-			"Temple_of_the_Dingo",
-			"Moddergat",
-			"KatKoula"
+			"Didymos_Valley",
+			"Faronaki_Col",
+			"Livadi_Bay",
+			"Panagia_Town",
+			"Faronaki_Quarry",
+			"Faronaki"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Temple_of_the_Dingo {
-		name =  "Temple of the Dingo";
+	class Faronaki {
+		name =  "Faronaki";
 		nearlocations[]={
-			"Marsh_Of_The_Muck_Duck",
-			"Pero_del_Pero",
-			"Tuvanaka",
-			"Vagalala",
-			"Oumere"
+			"Katalaki_Penninsula",
+			"Didymos_Valley",
+			"Faronaki_Quarry",
+			"Didymos_Plain",
+			"Vikos_Outpost",
+			"Pyrgos_Town",
+			"AAC_Airfield"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Oumere {
-		name =  "Oumere";
+	class Faronaki_Quarry {
+		name =  "Faronaki Quarry";
 		nearlocations[]={
-			"Marsh_Of_The_Muck_Duck",
-			"Temple_of_the_Dingo",
-			"Pero_del_Pero",
-			"Vagalala",
-			"Tanouka"
+			"Didymos_Valley",
+			"Didymos_Plain",
+			"Pyrgos_Town",
+			"Faronaki_Col",
+			"Chalkeia"
+			
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Pero_del_Pero {
-		name =  "Pero del Pero";
+	class Faronaki_Col {
+		name =  "Faronaki Col";
 		nearlocations[]={
-			"Blue_Pearl_industrial_Port",
-			"Oumere",
-			"Temple_of_the_Dingo",
-			"Red_Spring",
-			"Abandoned_Mine"
+			"Faronaki_Quarry",
+			"Didymos_Valley",
+			"Didymos_Plain",
+			"Aktinarki",
+			"Chalkeia"
+			
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Vagalala {
-		name =  "Vagalala";
+	class Aktinarki {
+		name =  "Aktinarki";
 		nearlocations[]={
-			"Red_Spring",
-			"Pero_del_Pero",
-			"Temple_of_the_Dingo",
-			"Tanouka",
-            "Tanouka_Sugar_Company",
-			"Abandoned_Mine"
+			"Panagia_Town",
+			"Chalkeia",
+			"Cap_Kategidis",
+			"Feres_Town",
+			"Faronaki_Col"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Red_Spring {
-		name =  "Red Spring";
+	class Chalkeia {
+		name =  "Chalkeia";
 		nearlocations[]={
-			"Tiger_Jungle",
-			"Blue_Pearl_industrial_Port",
-			"Abandoned_Mine",
-			"Nasau",
-			"Mount_Tanoa",
-            "Dr_Venkman_Observatory"
+			"Aktinarki",
+			"Cap_Kategidis",
+			"Faronaki_Col",
+			"Dorida"
+			
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Tanouka {
-		name =  "Tanouka";
+	class Pyrgos_Town {
+		name =  "Pyrgos";
 		nearlocations[]={
-			"Tanouka_Sugar_Company",
-			"Sheeps_Hump",
-			"Temple_of_the_Dingo",
-			"Galili",
-			"Georgetown"
+			"Dorida",
+			"Charkia_Mine",
+			"Chelonisi",
+			"Faronaki_Quarry",
+			"Faronaki",
+			"Katalaki_Penninsula",
+			"Lakka",
+			"Terminal"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Tanouka_Sugar_Company {
-		name =  "Tanouka Sugar Company";
+	class Chelonisi {
+		name =  "Chelonisi";
 		nearlocations[]={
-			"Sheeps_Hump",
-			"Galili",
-			"Georgetown",
-			"Tanouka",
-			"Railway_Depot"
+			"Dorida",
+			"Charkia_Mine",
+			"Faronaki_Quarry",
+			"Faronaki",
+			"Katalaki_Penninsula",
+			"Charkia",
+			"Anthrakia"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Tiger_Jungle {
-		name =  "Tiger Jungle";
+	class Dorida {
+		name =  "Dorida";
 		nearlocations[]={
-			"Blue_Pearl_industrial_Port",
-			"Ipota",
-			"La_Rochelle_Aerodome",
-			"Nasau",
-			"Abandoned_Mine"
+			"Cap_Kategidis",
+			"Limni",
+			"Charkia_Mine",
+			"Charkia",
+			"Chelonisi",
+			"Chalkeia",
+			"Pyrgos_Town",
+			
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Georgetown {
-		name =  "Georgetown";
+	class Cap_Kategidis {
+		name =  "Cap Kategidis";
 		nearlocations[]={
-			"Saint_Julian",
-			"Railway_Depot",
-			"Sosovu",
-			"Sheeps_Hump",
-			"Belfort"
+			"Pyrgos_Town",
+			"Cap_Thelos",
+			"Ochrolimni",
+			"Kalochori_Town",
+			"Dorida",
+			"Limni",
+			"Chalkeia",
+			"Aktinarki"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Saint_Julian {
-		name =  "Saint Julian";
+	class Limni {
+		name =  "Limni";
 		nearlocations[]={
-			"Galili",
-			"Georgetown",
-			"Vehicle_Range",
-			"Belfort",
-			"Sosovu"
+			"Cap_Kategidis",
+			"Kalochori_Town",
+			"Cap_Thelos",
+			"Charkia",
+			"Charkia_Mine",
+			"Dorida"
+			
+		};
+		type = "Outpost";
+		vehicles[] = {}; 
+		
+	};class Cap_Thelos {
+		name =  "Cap Thelos";
+		nearlocations[]={
+			"Cap_Kategidis",
+			"Kalochori_Town",
+			"Ochrolimni",
+			"Salt_Flats_North",
+			"Salt_Flats_South"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Sheeps_Hump {
-		name =  "Sheeps_Hump";
+	class Salt_Flats_South {
+		name =  "Salt Flats South";
 		nearlocations[]={
-			"Tanouka",
-			"Tanouka_Sugar_Company",
-			"Georgetown",
-			"Saint_Julian",
-			"Railway_Depot",
-			"Sosovu"
+			"Ochrolimni",
+			"Salt_Flats_North",
+			"Cap_Thelos",
+			"Kalochori_Town"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Galili {
-		name =  "Galili";
+	
+	class Charkia {
+		name =  "Charkia";
 		nearlocations[]={
-			"Georgetown",
-			"Saint_Julian",
-			"Railway_Depot",
-			"Sosovu",
-			"Dr_Venkman_Observatory",
-			"Mount_Tanoa"
+			"Anthrakia",
+			"Rodopoli",
+			"Charkia_Mine",
+			"Limni"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Railway_Depot {
-		name =  "Railway Depot";
+	class Charkia_Mine {
+		name =  "Charkia Mine";
 		nearlocations[]={
-			"Balavu",
-			"Sosovu",
-			"Georgetown",
-			"Belfort",
-			"Sheeps_Hump"
+			"Charkia",
+			"Limni",
+			"Dorida",
+			"Chelonisi"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Abandoned_Mine {
-		name =  "Abandoned Mine";
+	class Ochrolimni{
+		name =  "Ochrolimni";
 		nearlocations[]={
-			"Tiger_Jungle",
-			"Nasau",
-			"Blue_Pearl_industrial_Port",
-			"Red_Spring",
-			"Penelo" 
+			"Salt_Flats_North",
+			"Salt_Flats_South",
+			"Cap_Thelos",
+			"Kalochori_Town",
+			"Limni"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Kalochori_Town{
+		name =  "Kalochori Town";
+		nearlocations[]={
+			"Paros_Town",
+			"Limni",
+			"Salt_Flats_North",
+			"Salt_Flats_South",
+			"Cap_Thelos"
+			
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Paros_Town {
+		name =  "Paros Town";
+		nearlocations[]={
+			"Agios_Georgios",
+			"Agios_Petros",
+			"Rodopoli",
+			"Kalochori_Town"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Rodopoli {
+		name =  "Rodopoli";
+		nearlocations[]={
+			"Kalochori_Town",
+			"Agios_Petros",
+			"Kalithea",
+			"Anthrakia"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Agios_Petros {
+		name =  "Agios Petros";
+		nearlocations[]={
+			"Kalithea",
+			"Cap_Zeryris",
+			"Rodopoli",
+			"Agios_Georgios"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Agios_Georgios {
+		name =  "Agios Georgios";
+		nearlocations[]={
+			"Hotel",
+			"Salt_Flats_South",
+			"Agios_Petros",
+			"Paros_Town",
+			"Cap_Zeryris"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Salt_Flats_North {
+		name =  "Salt Flats North";
+		nearlocations[]={
+			"Salt_Flats_South",
+			"Ioannina",
+			"Delfinaki",
+			"Sofia_Town"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Sofia_Town {
+		name =  "Sofia Town";
+		nearlocations[]={
+			"Gatolia_Hill",
+			"Molos_Hill",
+			"Nidasos_Hill",
+			"Limnichori",
+			"Nidasos"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Gatolia_Hill {
+		name =  "Gatolia Hill";
+		nearlocations[]={
+			"Sofia_Town",
+			"Molos_Airfield",
+			"Molos_Bay_South",
+			"Molos_Hill",
+			"Limnichori"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+		};
+	class Nidasos {
+		name =  "Nidasos";
+		nearlocations[]={
+			"Nidasos_Hill",
+			"Hotel",
+			"Sofia_Town",
+			"Agios_Andreas"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Molos_Town {
+		name =  "Molos Town";
+		nearlocations[]={
+			"Molos_Hill",
+			"Molos_Airfield",
+			"Molos_Bay_South",
+			"Cap_Strigla"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Cap_Strigla {
+		name =  "Cap Strigla";
+		nearlocations[]={
+			"Molos_Hill",
+			"Molos_Airfield",
+			"Molos_Bay_South",
+			"Molos_Town"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Molos_Airfield {
+		name =  "Molos Airfield";
+		nearlocations[]={
+			"Molos_Hill",
+			"Molos_Bay_South",
+			"Molos_Town",
+			"Cap_Strigla"
 		};
 		type = "Base";
-		respawnPos = "mine_pl_res";
-		visMrkr = "FOB_Comms_Bravo"
-		vehicles[] = {
-			{"B_T_LSV_01_armed_F", "mine_veh1",300},
-			{"B_T_LSV_01_armed_F", "mine_veh2",300},
-			{"B_T_Truck_01_ammo_F", "mine_veh3",700},
-			{"B_T_LSV_01_unarmed_F", "mine_veh4",1200},
-			{"B_T_LSV_01_unarmed_F", "mine_veh5",1200},
-			{"B_T_Truck_01_transport_F", "mine_veh6",1200}
+		respawnPos = "mol_pl_res";
+		visMrkr = "FOB_Last_Stand";
+		vehicles[] = 
+		{
+			{"B_Plane_CAS_01_F", "mol_jet_spawn",5400},
+			{"B_Heli_Light_01_F", "mol_heli1",600},
+			{"I_Heli_light_03_F", "mol_heli2",300},
+			{"B_MRAP_01_hmg_F", "mol_veh1",300},
+			{"B_MRAP_01_gmg_F", "mol_veh2",300},
+			{"B_Truck_01_medical_F", "mol_veh3",300},
+			{"B_APC_Wheeled_01_cannon_F", "mol_veh4",600},
+			{"B_APC_Wheeled_01_cannon_F", "mol_veh5",600},
+			{"B_MBT_01_cannon_F", "mol_veh6",1200}
 		};
 	};
-	class Dr_Venkman_Observatory {
-		name =  "Dr Venkman Observatory";
+	class Molos_Bay_South {
+		name =  "Molos Bay South";
 		nearlocations[]={
-			"Mount_Tanoa",
-			"Galili",
-			"Abandoned_Mine",
-			"La_Rochelle_Aerodome",
-			"La_Rochelle",
-			"Penelo"
-		};
-		type = "Outpost";
-		vehicles[] = {};
-	};
-	class Mount_Tanoa {
-		name =  "Mount Tanoa";
-		nearlocations[]={
-			"Dr_Venkman_Observatory",
-			"Abandoned_Mine",
-			"Galili",
-			"La_Rochelle_Aerodome",
-			"La_Rochelle",
-			"Penelo"
+			"Molos_Hill",
+			"Molos_Airfield",
+			"Molos_Town",
+			"Cap_Strigla"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Penelo {
-		name =  "Penelo";
+	class Molos_Hill {
+		name =  "Molos Hill";
 		nearlocations[]={
-			"Nasau",
-			"La_Rochelle_Aerodome",
-			"La_Rochelle",
-			"Ipota",
-			"Arch_Of_The_Spartans"
+			"Molos_Airfield",
+			"Molos_Bay_South",
+			"Molos_Town",
+			"Cap_Strigla",
+			"Limnichori"
+			
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class La_Rochelle {
-		name =  "La Rochelle";
+	class Limnichori {
+		name =  "Limnichori";
 		nearlocations[]={
-			"Arch_Of_The_Spartans",
-			"Ipota",
-			"Galili",
-			"Penelo",
-			"La_Rochelle_Aerodome"
+			"Molos_Airfield",
+			"Molos_Bay_South",
+			"Molos_Town",
+			"Cap_Strigla"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class La_Rochelle_Aerodome {
-		name =  "La Rochelle Aerodome";
+	class Agios_Andreas {
+		name =  "Agios Andreas";
 		nearlocations[]={
-			"Arch_Of_The_Spartans",
-			"Ipota",
-			"Galili",
-			"Penelo",
-			"La_Rochelle",
-			"Blue_Pearl_industrial_Port" 
+			"Limnichori",
+			"Nidasos",
+			"Nidasos_Hill",
+			"Sofia_Town"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Nasau {
-		name =  "Nasau";
+	class Nidasos_Hill {
+		name =  "Nidasos Hill";
 		nearlocations[]={
-			"Tiger_Jungle",
-			"Abandoned_Mine",
-			"Dr_Venkman_Observatory",
-			"Penelo",
-			"Mount_Tanoa" 
+			"Limnichori",
+			"Nidasos",
+			"Sofia_Town",
+			"Hotel"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Blue_Pearl_industrial_Port {
-		name =  "Blue Pearl industrial Port";
+	class Hotel {
+		name =  "Hotel";
 		nearlocations[]={
-			"Pero_del_Pero",
-			"Red_Spring",
-			"Tiger_Jungle",
-			"Nasau",
-			"La_Rochelle_Aerodome",
-			"La_Rochelle",
-			"Penelo" 
+			"Agios_Georgios",
+			"Ioannina",
+			"Nidasos",
+			"Nidasos_Hill",
+			"Delfinaki"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	class Int_Airport {
-		name = "International Airpot of Tanoa"
+	class Ioannina {
+		name =  "Ioannina";
 		nearlocations[]={
-			"Railway_Depot",
-			"Rautake",
-			"Sheeps_Hump",
-			"Lakatoro"
+			"Agios_Georgios",
+			"Hotel",
+			"Nidasos",
+			"Nidasos_Hill",
+			"Delfinaki"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Delfinaki {
+		name =  "Delfinaki";
+		nearlocations[]={
+			"Salt_Flats_North",
+			"Ioannina",
+			"Sofia_Town",
+			"Hotel"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Kalithea {
+		name =  "Kalithea";
+		nearlocations[]={
+			"Cap_Zeryris",
+			"Zeloran",
+			"Agios_Georgios",
+			"Petros",
+			"Anthrakia",
+			"Telos"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Cap_Zeryris {
+		name =  "Cap Zeryris";
+		nearlocations[]={
+			"Zeloran",
+			"Kalithea",
+			"Agia_Trida",
+			"Athira_Factory",
+			"Telos"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Anthrakia {
+		name =  "Anthrakia";
+		nearlocations[]={
+			"Neochori",
+			"Chelonisi",
+			"Kalithea",
+			"Athira_Town",
+			"Katalaki_Penninsula",
+			"Terminal",
+			"Telos"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Zeloran {
+		name =  "Zeloran";
+		nearlocations[]={
+			"Agia_Trida",
+			"Cap_Zeryris",
+			"Nychi",
+			"Kalithea",
+			"Frini",
+			"Terminal",
+			"Telos"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Agia_Trida {
+		name =  "Agia Trida";
+		nearlocations[]={
+			"Nychi",
+			"Frini",
+			"Zeloran",
+			"Athira_Factory"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Nychi {
+		name =  "Nychi";
+		nearlocations[]={
+			"Cap_Agrios",
+			"Frini_Woods",
+			"Frini",
+			"Agia_Trida",
+			"Zeloran"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Cap_Agrios {
+		name =  "Cap Agrios";
+		nearlocations[]={
+			"Tonos_Bay",
+			"Frini_Woods",
+			"Nychi",
+			"Hill_140",
+			"Frini"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Frini {
+		name =  "Frini";
+		nearlocations[]={
+			"Frini_Woods",
+			"Agia_Trida",
+			"Ifestiona",
+			"Athira_Factory"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Frini_Woods {
+		name =  "Frini Woods";
+		nearlocations[]={
+			"Frini",
+			"Nychi",
+			"Agia_Trida",
+			"Hill_140"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Tonos_Bay {
+		name =  "Tonos Bay";
+		nearlocations[]={
+			"Cap_Agrios",
+			"Frini_Woods",
+			"Hill_140",
+			"Krya_Nera"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Hill_140 {
+		name =  "Hill 140";
+		nearlocations[]={
+			"Abdera",
+			"Ifestiona",
+			"Tonos_Bay",
+			"Frini_Woods"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Ammolofi_Bay {
+		name =  "Ammolofi Bay";
+		nearlocations[]={
+			"Krya_Nera",
+			"Adbera_Turbines",
+			"Abdera_Airstrip",
+			"Tonos_Bay"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Krya_Nera {
+		name =  "Krya Nera";
+		nearlocations[]={
+			"Abdera",
+			"Ammolofi_Bay",
+			"Adbera_Turbines",
+			"Galati"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Ifestiona {
+		name =  "Ifestiona";
+		nearlocations[]={
+			"Koroni",
+			"Athira_Town",
+			"Frini",
+			"Hill_140"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Katalaki_Penninsula {
+		name =  "Katalaki Penninsula";
+		nearlocations[]={
+			"Chelonisi",
+			"Pyrgos_Town",
+			"Faronaki",
+			"Neochori",
+			"AAC_Airfield"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Katalaki {
+		name =  "Katalaki";
+		nearlocations[]={
+			"Neochori",
+			"Katalaki_Penninsula",
+			"Therisa",
+			"Xirolimni_Dam",
+			"Alikampos",
+			"AAC_Airfield"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Neochori {
+		name =  "Neochori";
+		nearlocations[]={
+			"Katalaki_Penninsula",
+			"Katalaki",
+			"Xirolimni_Dam",
+			"Koroni",
+			"Alikampos",
+			"Lakka",
+			"Terminal"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Abdera {
+		name =  "Abdera";
+		nearlocations[]={
+			"Abdera_Airstrip",
+			"Krya_Nera",
+			"Galati",
+			"Hill_140"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Dump_Station {
+		name =  "Dump Station";
+		nearlocations[]={
+			"Oreokastro",
+			"Synneforos",
+			"Agios_Konstantinos_Turbines",
+			"Abdera"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Kore {
+		name =  "Kore";
+		nearlocations[]={
+			"Gori_Woods",
+			"Negadas",
+			"Topolia",
+			"Stadium"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Xirolimni_Dam {
+		name =  "Xirolimni Dam";
+		nearlocations[]={
+			"Zaros",
+			"Agia_Stemma",
+			"Kalithea",
+			"Katalaki_Penninsula",
+			"Therisa",
+			"Alikampos"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Agios_Dionysios {
+		name =  "Agios Dionysios";
+		nearlocations[]={
+			"Orino",
+			"Xirolimni_Dam",
+			"Agia_Stemma",
+			"Neochori",
+			"Alikampos",
+			"Lakka"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Syrta {
+		name =  "Syrta";
+		nearlocations[]={
+			"Gori_Woods",
+			"Kore",
+			"Abdera",
+			"Orino"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Koroni {
+		name =  "Koroni";
+		nearlocations[]={
+			"Galati",
+			"Ifestiona",
+			"Athira_Town",
+			"Neochori",
+			"Lakka",
+			"Terminal"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Orino {
+		name =  "Orino";
+		nearlocations[]={
+			"Agios_Dionysios",
+			"Syrta",
+			"Galati",
+			"Koroni",
+			"Lakka"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Galati {
+		name =  "Galati";
+		nearlocations[]={
+			"Abdera",
+			"Syrta",
+			"Koroni",
+			"Ifestiona",
+			"Orino"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Athira_Factory {
+		name =  "Athira Factory";
+		nearlocations[]={
+			"Ifestiona",
+			"Koroni",
+			"Athira_Town",
+			"Zeloran",
+			"Agia_Trida"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Athira_Town {
+		name =  "Athira Town";
+		nearlocations[]={
+			"Ifestiona",
+			"Koroni",
+			"Athira_Factory",
+			"Zeloran",
+			"Terminal",
+			"Telos"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Gori_Woods {
+		name =  "Gori Woods";
+		nearlocations[]={
+			"Dump_Station",
+			"Abdera",
+			"Syrta",
+			"Kira"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Agia_Stemma {
+		name =  "Agia Stemma";
+		nearlocations[]={
+			"Topolia",
+			"Agios_Dionysios",
+			"Xirolimni_Dam",
+			"Stadium",
+			"Zaros"
+			
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Topolia {
+		name =  "Topolia";
+		nearlocations[]={
+			"Kore",
+			"Agios_Dionysios",
+			"Agia_Stemma",
+			"Xirolimni_Dam",
+			"Stadium"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Alikampos {
+		name =  "Alikampos";
+		nearlocations[]={
+			"Katalaki",
+			"Neochori",
+			"Agios_Dionysios",
+			"Xirolimni_Dam",
+			"Lakka"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Lakka {
+		name =  "Lakka";
+		nearlocations[]={
+			"Alikampos",
+			"Neochori",
+			"Terminal",
+			"Orino",
+			"Agios_Dionysios"
+		};
+		type = "Outpost";
+		vehicles[] = {};
+	};
+	class Terminal {
+		name =  "Terminal";
+		nearlocations[]={
+			"Lakka",
+			"Neochori",
+			"Telos",
+			"Athira",
+			"Anthrakia"
 		};
 		type = "Base";
-		respawnPos = "Int_Air_pl_res";
-		visMrkr = "FOB_International_Airport";
-		vehicles[] = {
-			{"B_Plane_CAS_01_F", "int_air_jet",5400},
-			{"B_Heli_Light_01_F", "int_air_heli1",600},
-			{"I_Heli_light_03_F", "int_air_heli2",300},
-			{"B_T_LSV_01_armed_F", "int_air_veh1",300},
-			{"B_T_LSV_01_armed_F", "int_air_veh2",300},
-			{"B_T_Truck_01_medical_F", "int_air_veh5",300},
-			{"B_T_APC_Wheeled_01_cannon_F", "int_air_veh3",600},
-			{"B_T_APC_Tracked_01_rcws_F", "int_air_veh4",600},
-			{"B_T_MBT_01_TUSK_F", "int_air_veh6",1200}
+		respawnPos = "term_pl_res";
+		visMrkr = "FOB_Guardian";
+		vehicles[] = 
+		{
+			{"B_Heli_Light_01_F", "term_heli1",1200},
+			{"B_Heli_Attack_01_F", "term_heli2",5400},
+			{"O_Heli_Light_02_F", "term_heli3",1200},
+			{"O_Heli_Transport_04_covered_F", "term_heli4",600},
+			{"B_MRAP_01_hmg_F", "term_veh1",300},
+			{"B_MRAP_01_gmg_F", "term_veh2",300},
+			{"B_Truck_01_fuel_F", "term_veh3",600},
+			{"B_Truck_01_transport_F", "term_veh4",300},
+			{"B_Truck_01_transport_F", "term_veh5",300},
+			{"B_Truck_01_transport_F", "term_veh6",300},
+			{"B_MBT_01_cannon_F", "term_veh7",1200},
+			{"I_APC_Wheeled_03_cannon_F", "term_veh8",900}
 		};
+	};
+	class Telos {
+		name =  "Telos";
+		nearlocations[]={
+			"Terminal",
+			"Anthrakia",
+			"Zeloran",
+			"Athira"
+		};
+		type = "Outpost";
+		vehicles[] = {};
 	};
 };

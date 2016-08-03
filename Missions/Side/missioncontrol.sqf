@@ -24,7 +24,6 @@ _loopTimeout = 10 + (random 10);
 _missionList = [
 	"HQcoast",
 	"HQresearch",
-	"policeProtection",
 	"secureChopper",
 	"secureIntelUnit",
 	"secureIntelVehicle",

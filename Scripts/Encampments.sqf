@@ -20,7 +20,7 @@ _createUnit = false;
 
 
 while { _currentUnit <= _unitsToCreate } do
-{	_aaLoc = [ mapCent,1,-1,1,0,2,0 ] call BIS_fnc_findSafePos;
+{	_aaLoc = [ spCenter,1,-1,1,0,2,0,spBlackList ] call BIS_fnc_findSafePos;
 	if ( _currentUnit > 1 ) then
 	{	{	if ( _x distance _aaLoc < _minDistance ) exitWith {};
 		} forEach _unitPosArray;

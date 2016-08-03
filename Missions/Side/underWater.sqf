@@ -131,8 +131,7 @@ while { sideMissionUp } do {
 		//-------------------- DE-BRIEFING
 
 		sideMissionUp = false;
-		[] call AW_fnc_SMhintSUCCESS;
-		["CompletedSideMission", "Underwater Demolitions"] remoteExec ["AW_fnc_globalNotification",0,false];
+		//[] call AW_fnc_SMhintSUCCESS;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"];
 		
 		//--------------------- SECONDARY EXPLOSIONS, create a function for this?

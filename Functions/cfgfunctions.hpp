@@ -31,7 +31,6 @@ class AW
 		class smenemyeast {};
 		class smenemyeastintel {};
 		class airCav {};
-		class factionDefine {};
 	};
 	
 	class supportFunctions
@@ -52,7 +51,6 @@ class AW
 		class getDefAO {};
 		class getDefFrom {};
 		class getEnemyAO {};
-		class getTowns {};
 	};
 	
 	class messageFunctions

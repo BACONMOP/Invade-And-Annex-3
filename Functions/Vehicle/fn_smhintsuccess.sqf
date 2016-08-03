@@ -24,6 +24,7 @@ waitUntil {!isNull _reward};
 _reward setDir 284;
 
 [_completeText] remoteExec ["AW_fnc_globalHint",0,false];
+["CompletedSideMission", sideMarkerText] remoteExec ["AW_fnc_globalNotification",0,false];
 _rewardtext = format["Your team received %1!", _vehName];
 ["Reward",_rewardtext] remoteExec ["AW_fnc_globalNotification",0,false];
 

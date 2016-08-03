@@ -22,4 +22,7 @@ _cfgArray = "getNumber (_x >> 'scope') >= 2" configClasses (configFile >> "CfgGl
 _cfgArray = "(901 in (getArray (_x >> 'allowedSlots')))" configClasses (configFile >> "CfgVehicles");
 {_returnArray pushBack (configName _x)} forEach _cfgArray;
 
+_cfgArray = "true" configClasses (configFile >> "CfgMagazines");
+{_returnArray pushBack (configName _x)} forEach _cfgArray;
+
 _returnArray
