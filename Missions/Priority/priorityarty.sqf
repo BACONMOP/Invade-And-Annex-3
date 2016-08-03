@@ -3,15 +3,15 @@ Author:
 
 	Quiksilver
 	Rarek [AW]
-	
+
 Last modified:
 
 	24/04/2014
-	
+
 Description:
 
 	Not done with this, want to get the Commanders gun firing, and some other stuff.
-	
+
 __________________________________________________________________________*/
 
 private ["_flatPos","_accepted","_position","_flatPos1","_flatPos2","_flatPos3","_PTdir","_unitsArray","_priorityGroup","_distance","_dir","_c","_pos","_barrier","_enemiesArray","_radius","_unit","_targetPos","_firingMessages","_fuzzyPos","_briefing","_completeText","_priorityMan1","_priorityMan2"];
@@ -38,39 +38,39 @@ private ["_flatPos","_accepted","_position","_flatPos1","_flatPos2","_flatPos3",
 	_flatPos1 = [(_flatPos select 0) - 2, (_flatPos select 1) - 2, (_flatPos select 2)];
 	_flatPos2 = [(_flatPos select 0) + 2, (_flatPos select 1) + 2, (_flatPos select 2)];
 	_flatPos3 = [(_flatPos select 0) + 20, (_flatPos select 1) + random 20, (_flatPos select 2)];
-	
+
 //-------------------- 2. SPAWN OBJECTIVES
 
 	_PTdir = random 360;
-	
+
 	sleep 0.3;
-	
+
 	priorityObj1 = "O_MBT_02_arty_F" createVehicle _flatPos1;
 	waitUntil {!isNull priorityObj1};
 	priorityObj1 setDir _PTdir;
-	
+
 	sleep 0.3;
-	
+
 	priorityObj2 = "O_MBT_02_arty_F" createVehicle _flatPos2;
 	waitUntil {!isNull priorityObj2};
 	priorityObj2 setDir _PTdir;
-	
+
 	sleep 0.3;
-	
+
 	//----- SPAWN AMMO TRUCK (for ambiance and plausibiliy of unlimited ammo)
-	
+
 	ammoTruck = "O_Truck_03_ammo_F" createVehicle _flatPos3;
 	waitUntil {!isNull ammoTruck};
 	ammoTruck setDir random 360;
-		
+
 	{_x lock 3;_x allowCrewInImmobile true; } forEach [priorityObj1,priorityObj2,ammoTruck];
-		
+
 //-------------------- 3. SPAWN CREW
 
 	sleep 1;
 
 	_unitsArray = [objNull];
-	
+
 	_priorityGroup = createGroup east;
 	_priorityGroup2 = createGroup east;
 	[priorityObj1,_priorityGroup] call BIS_fnc_spawnCrew;
@@ -78,14 +78,14 @@ private ["_flatPos","_accepted","_position","_flatPos1","_flatPos2","_flatPos3",
 	[(units _priorityGroup)] call AW_fnc_setSkill4;
 	[(units _priorityGroup2)] call AW_fnc_setSkill4;
 	_priorityGroup setBehaviour "COMBAT";
-	_priorityGroup setCombatMode "RED";	
+	_priorityGroup setCombatMode "RED";
 	_priorityGroup allowFleeing 0;
-	
+
 	_unitsArray pushBack _priorityGroup;
 	_unitsArray pushBack _priorityGroup2;
 
 //-------------------- 4. SPAWN H-BARRIER RING
-	
+
 	sleep 1;
 
 	_distance = 16;
@@ -96,12 +96,12 @@ private ["_flatPos","_accepted","_position","_flatPos1","_flatPos2","_flatPos3",
 		waitUntil {alive _barrier};
 		_barrier setDir _dir;
 		_dir = _dir + 45;
-		_barrier allowDamage false; 
+		_barrier allowDamage false;
 		_barrier enableSimulation false;
-		
+
 		_unitsArray = _unitsArray + [_barrier];
 	};
-	
+
 //-------------------- 5. SPAWN FORCE PROTECTION
 
 
@@ -112,43 +112,43 @@ private ["_flatPos","_accepted","_position","_flatPos1","_flatPos2","_flatPos3",
 
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 	{ _x setMarkerPos _fuzzyPos; } forEach ["priorityMarker", "priorityCircle"];
-	
+
 	priorityTargetText = "Artillery";
 	"priorityMarker" setMarkerText "Priority Target: Artillery";
 
 	_briefing = "<t align='center' size='2.2'>Priority Target</t><br/><t size='1.5' color='#b60000'>Artillery</t><br/>____________________<br/>OPFOR forces are setting up an artillery battery to hit you guys damned hard! We've picked up their positions with thermal imaging scans and have marked it on your map.<br/><br/>This is a priority target, boys! They're just setting up now; they'll be firing in about five minutes!";
 	[_briefing] remoteExec ["AW_fnc_globalHint",0,false];
 
-	
+
 //-------------------- FIRING SEQUENCE LOOP
 
 _radius = 80;
-	
+
 while { canMove priorityObj1 || canMove priorityObj2 } do {
 
 		_accepted = false;
 		_unit = objNull;
 		_targetPos = [0,0,0];
-		
+
 		while {!_accepted} do {
-			
+
 			if (isMultiplayer) then {
 				_unit = playableUnits select (floor (random (count playableUnits)));
 			} else {
 				_unit = switchableUnits select (floor (random (count switchableUnits)));
 			};
-			
+
 			if (!isNull _unit) then {
 				_targetPos = getPos _unit;
 				if ((_targetPos distance (getMarkerPos "respawn_west")) > 1000) then {
-					if ((_targetPos distance (getMarkerPos "FOB_Martian")) > 1000) then {
-						if ((_targetPos distance (getMarkerPos "FOB_Marathon")) > 1000) then {
-							if ((_targetPos distance (getMarkerPos "FOB_Guardian")) > 1000) then {
-								if ((_targetPos distance (getMarkerPos "Dirt_Track")) > 1000) then {
-									if ((_targetPos distance (getMarkerPos "Dirt_Last_Stand")) > 1000) then {
-										if (&& vehicle _unit == _unit) then { 
-											if (side _unit == WEST) then { 
-												_accepted = true; 
+					if ((_targetPos distance (getMarkerPos "FOB_Eagle")) > 1000) then {
+						if ((_targetPos distance (getMarkerPos "FOB_Fin")) > 1000) then {
+							if ((_targetPos distance (getMarkerPos "FOB_Comms_Bravo")) > 1000) then {
+								if ((_targetPos distance (getMarkerPos "FOB_International_Airport")) > 1000) then {
+									if ((_targetPos distance (getMarkerPos "FOB_International_Airport")) > 1000) then {
+										if (&& vehicle _unit == _unit) then {
+											if (side _unit == WEST) then {
+												_accepted = true;
 											} else {
 												sleep 7;																// default 10
 											};
@@ -160,19 +160,19 @@ while { canMove priorityObj1 || canMove priorityObj2 } do {
 						};
 					};
 				};
-		_dir = [_flatPos, _targetPos] call BIS_fnc_dirTo;	
+		_dir = [_flatPos, _targetPos] call BIS_fnc_dirTo;
 		{ _x setDir _dir; } forEach [priorityObj1, priorityObj2];
 
 		sleep 5;																		// default 5
-		
+
 		{
 			if (alive _x) then {
 				[_x,_targetPos] call AW_fnc_artyStrike;
 			};
 		} forEach [priorityObj1,priorityObj2];
-		
+
 		if (_radius > 10) then { _radius = _radius - 10; };
-		
+
 		if (PARAMS_ArtilleryTargetTickTimeMax <= PARAMS_ArtilleryTargetTickTimeMin) then {
 			sleep PARAMS_ArtilleryTargetTickTimeMin;
 		} else {
@@ -188,6 +188,6 @@ _completeText = "<t align='center' size='2.2'>Priority Target</t><br/><t size='1
 
 //-------------------- DELETE
 
-sleep 120; 																
+sleep 120;
 { [_x] spawn AW_fnc_SMdelete } forEach [_enemiesArray,_unitsArray];
 { deleteVehicle _x } forEach [priorityObj1,priorityObj2,ammoTruck];

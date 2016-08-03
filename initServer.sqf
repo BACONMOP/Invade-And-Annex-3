@@ -1,13 +1,16 @@
 /*
 Author:
-	
+
 	BACONMOP
-	
+
 Description:
 
 	Things that may run on both server.
 	Deprecated initialization file.
 ______________________________________________________*/
+enableSaving false;
+artySorcher allowDamage False;
+artyMLRS allowDamage False;
 for [ {_i = 0}, {_i < count(paramsArray)}, {_i = _i + 1} ] do {
 	call compile format
 	[

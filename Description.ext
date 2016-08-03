@@ -2,20 +2,20 @@
 
 author = BACONMOP;					// Visible when loading mission
 onLoadName = "Invade & Annex 3 Beta Release 5";						// Visible when loading mission
-OnLoadMission = "Welcome back to the home of Invade and Annex ... Join us on TeamSpeak at ts.ahoyworld.net:9987";
+OnLoadMission = "Beta Release 5 for Invade And Annex 3.0.0 If you want to get involved with Ahoy World or development of Invade And Annex go to AhoyWorld.Net of join ts.AhoyWorld.Net";
 loadScreen = "";				// Visible when loading mission
-overviewPicture = "";			// Visible when selecting mission	
+overviewPicture = "";			// Visible when selecting mission
 
 onLoadIntro = "";										// Displays a message while the intro is loading.
 onLoadIntroTime = 0;									// Time and date displayed while the intro loads. 1 visible, 0 hidden.
 onLoadMissionTime = 0;									// Time and date displayed while the mission loads. 1 visible, 0 hidden.
 
-class Header 
+class Header
 	{
 		gameType = COOP;								// Unknown, COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
 		minPlayers = 1;									// Min # of players the MISSION supports
 		maxPlayers = 60;								// Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots.
-	}; 
+	};
 
 //------------------------- Admin
 
@@ -25,7 +25,7 @@ onPauseScript = "scripts\onPause.sqf";
 
 //------------------------- Misc
 
-disableChannels[] = {6};								// 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global. 
+disableChannels[] = {6};								// 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global.
 disabledAI = 1;											// No AI in playable units
 aiKills = 0; 											// disable scorelist for AI players
 enableItemsDropping = 0; 								// disabled with 0
@@ -33,7 +33,7 @@ joinUnassigned = 1;										// 0 = players forced into role on join
 showUAVFeed = 1;										// Enables/Disables the UAV Feed. Zeus-related.
 
 
-//------------------------- Respawn
+//-------------------------Respawn
 class CfgRespawnTemplates {
     class derp_revive {
         // Function or script executed upon death. Parameters passed into it are the same as are passed into onPlayerKilled.sqf file
@@ -51,16 +51,20 @@ class CfgRespawnTemplates {
 respawn = 3;
 respawnDelay = 10;
 respawnOnStart = 0;
-respawnTemplates[] = {"derp_revive", "MenuPosition"};
+respawnTemplates[] = {"MenuPosition", __EVAL(call compile preprocessFileLineNumbers "functions\revive\fn_ace3Check.sqf")};
+// Remove the eval if you desire to use an other vanilla revive system, it's used to detect the ACE3 revive system and enable or not derp_revive
+
 derp_revive_bleedOutTimer = 300;
 derp_revive_everyoneCanRevive = 0; // 0 = medics only, 1 = everyone
+derp_revive_reviveItem = 0; // 0 = first aid kit, 1 = medikit
+derp_revive_removeFAKOnUse = 1; // 0 = don't remove on use, 1 = remove on use
 
 //------------------------- Garbage collector
-							
+
 wreckLimit = 3;											// Limit before removal is triggered
 wreckRemovalMinTime = 120;								// Min time before removal
 wreckRemovalMaxTime = 360;								// Max time before removal
-corpseLimit = 5;										// Limit before removal is triggered		
+corpseLimit = 5;										// Limit before removal is triggered
 corpseRemovalMinTime = 60;								// Min time before removal
 corpseRemovalMaxTime = 120;								// Max time before removal
 
@@ -68,14 +72,13 @@ corpseRemovalMaxTime = 120;								// Max time before removal
 
 #include "scripts\taw_vd\dialog.hpp" 					// TAW View Distance
 #include "scripts\vehicle\crew\common.hpp"  			// vehicle crew hud
-#include "functions\portedFuncs\ace3\progressBarGUI.hpp"
 
-class Main_Aos 
+class Main_Aos
 	{
 		#include "defines\MainAos.hpp"
 	};
-	
-class unitList 
+
+class unitList
 	{
 		#include "defines\units.hpp"
 	};
@@ -85,22 +88,22 @@ class CfgFunctions
 		#include "functions\cfgfunctions.hpp"					// Integrated I&A functions
 		#include "scripts\taw_vd\CfgFunctions.hpp"				// View distance
 	};
-	
+
 class CfgNotifications
 	{
-		#include "defines\Notifications.hpp"	
+		#include "defines\Notifications.hpp"
 	};
-	
-class RscTitles 
+
+class RscTitles
 	{
 		#include "scripts\vehicle\crew\namesleft.hpp"	// Occupants HUD for vehicles
 	};
 //------------------------- Parameters
 
-class Params 
-	{		
+class Params
+	{
 
-		
+
 		class title1
 		{
 			title = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Misc Settings ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
@@ -108,21 +111,21 @@ class Params
 			texts[] = {""};
 			default = 0;
 		};
-		
+
 		class MainEnemyFaction {
 			title = "Main Enemy Faction (Not Working Yet)";
 			values[] = {1,2,3,4,5,6,7};
 			texts[] = {"CSAT","CSAT Tropic","AAF","ParaMillitary","Bandits","FIA Independent","FIA Opfor"};
 			default = 2;
 		};
-		
+
 		class SecondaryEnemyFaction {
 			title = "Secondary Enemy Faction (Not Working Yet)";
 			values[] = {1,2,3,4,5,6,7};
 			texts[] = {"CSAT","CSAT Tropic","AAF","ParaMillitary","Bandits","FIA Independent","FIA Opfor"};
 			default = 4;
 		};
-		
+
 		class VehicleRespawnDistance {
 			title = "Distance from players that vehicles won't respawn";
 			values[] = {10,50,100,200,300,400,500,1000,2000,5000,10000};
@@ -142,14 +145,14 @@ class Params
 			texts[] = {"30 seconds","1 minute","2 minutes","3 minutes","4 minutes","5 minutes","10 minutes","15 minutes"};
 			default = 600; // 300 default
 		};
-		
+
 		class ArsenalFilter {
 			title = "Filter mode of the arsenal";
 			texts[] = {"Arsenal disabled", "Arsenal enabled but filtered", "Arsenal enabled"};
 			values[] = {0, 1, 2};
 			default = 1;
 		};
-		
+
 		class Fatigue {
 			title = "Enable Fatigue";
 			texts[] = {"Yes","No"};
@@ -164,7 +167,7 @@ class Params
 			texts[] = {""};
 			default = 0;
 		};
-		
+
 		class EnemyLeftThreshhold {
 			title = "Enemy Left Threshold";
 			values[] = {1,2,3,4,5,6,7,8,9,10};
@@ -227,8 +230,8 @@ class Params
 			values[] = {0};
 			texts[] = {""};
 			default = 0;
-		};	
-		
+		};
+
 		class AIAimingAccuracy {
 			title = "AI aiming accuracy";
 			values[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};

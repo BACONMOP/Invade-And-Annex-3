@@ -5,7 +5,7 @@ class AW
 	{
 		file = "functions";
 	};
-	
+
 	class vehicleFunctions
 	{
 		file = "functions\Vehicle";
@@ -15,7 +15,7 @@ class AW
 		class baseHunter {};
 		class SMhintSUCCESS {};
 	};
-	
+
 	class unitFunctions
 	{
 		file = "functions\Units";
@@ -33,7 +33,7 @@ class AW
 		class airCav {};
 		class factionDefine {};
 	};
-	
+
 	class supportFunctions
 	{
 		file = "functions\Supports";
@@ -43,7 +43,7 @@ class AW
 		class supportRequest {};
 		class airfieldJet {};
 	};
-	
+
 	class locationFunctions
 	{
 		file = "functions\Location";
@@ -54,27 +54,27 @@ class AW
 		class getEnemyAO {};
 		class getTowns {};
 	};
-	
+
 	class messageFunctions
 	{
 		file = "functions\Messages";
 		class globalHint {};
 		class globalnotification {};
 	};
-	
+
 	class cleanupFunctions
 	{
 		file = "functions\Cleanup";
 		class smdelete {};
 		class aodelete {};
 	};
-	
+
 	class baseFunctions
 	{
 		file = "functions\Base";
 		class BaseManager {};
 	};
-	
+
 	class miscFunctions
 	{
 		file = "functions\Misc";
@@ -105,10 +105,9 @@ class derp
 		class findItemList {};
 		class gearLimitations {};
 		class Va_filter {};
-		class vaserver {};
 	};
-	
-	class CBA {
+
+    class CBA {
         file = "functions\portedFuncs\cba";
         class pfhPreInit { preInit = 1; };
         class addPerFrameHandler {};
@@ -118,13 +117,9 @@ class derp
         class waitUntilAndExecute {};
         class pfhPostInit { postInit = 1; };
         class getTurret {};
+        class directCall {};
     };
 
-    class ACE3 {
-        file = "functions\portedFuncs\ace3";
-        class progressBar {};
-    };
-	
 	class AI {
         file = "functions\AI";
         class mainAOSpawnHandler {};
@@ -136,7 +131,6 @@ class derp
 
 class derp_revive {
 
-	tag = "derp_revive";
     class Revive {
         file = "functions\revive";
         class onPlayerKilled {};
@@ -154,5 +148,7 @@ class derp_revive {
         class uiElements {};
         class animChanged {};
         class drawDowned {};
+        class handleDamage {};
+        class ace3Check {};
     };
 };

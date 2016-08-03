@@ -1,13 +1,17 @@
 /*
 Author:
-	
+
 	BACONMOP
-	
+
 Description:
 
 	Things that may run on both server and client.
 	Deprecated initialization file, still using until the below is correctly partitioned between server and client.
 ______________________________________________________*/
+
+enableSaving false;
+artySorcher allowDamage False;
+artyMLRS allowDamage False;
 
 //---------------------------------- Mission vars (for all clients)
 derp_PARAM_AOSize = "AOSize" call BIS_fnc_getParamValue;

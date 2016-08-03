@@ -1,12 +1,12 @@
 /*
 @filename: onPlayerRespawn.sqf
 Author:
-	
+
 	BACONMOP
 
 Last modified:
 
-	
+
 Description:
 
 	Client scripts that should execute after respawn.
@@ -46,13 +46,13 @@ if (_iampilot) then {
 //======================Refueling with Repair spec and Engineer
 
 FUELFUNC = {
-   
+
 ADDFUEL = player addAction ["<t color='#99ffc6'>Refuel Aircraft</t>",{
-RF_BIRD = cursorTarget; publicVariable "RF_BIRD"; 
+RF_BIRD = cursorTarget; publicVariable "RF_BIRD";
 Current_fuel = fuel RF_BIRD; if (Current_fuel <= 0.1) then { Fuel_to_ADD = Current_fuel + 0.2; publicVariable "Fuel_to_ADD";
 Send_Com = {RF_BIRD setFuel Fuel_to_ADD}; publicVariable "Send_Com";
 remoteExecCall ["Send_Com",2]; cutText['Aircraft refuelled', 'PLAIN']; } else { cutText['Fuel not required', 'PLAIN'];  };
-  
+
   },[],1,false,true,""," ((vehicle player) == player) && (CursorTarget isKindOf ""Air"" ) && ((player distance cursorTarget) < 10) "];
 };
 

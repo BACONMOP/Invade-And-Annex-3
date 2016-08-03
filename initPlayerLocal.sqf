@@ -1,3 +1,4 @@
+enableSaving false;
 artySorcher allowDamage False;
 artyMLRS allowDamage False;
 
@@ -24,6 +25,15 @@ if ("ArsenalFilter" call BIS_fnc_getParamValue == 1) then {
         }];
     };
 [ArsenalBoxes, ("ArsenalFilter" call BIS_fnc_getParamValue)] call derp_fnc_VA_filter; // Init arsenal boxes.
+    {
+    _x addAction [
+        "<t color='#006bb3'>Save gear</t>",
+        {
+            player setVariable ["derp_savedGear", (getUnitLoadout player)];
+            systemChat "gear saved";
+        }
+    ];
+    } foreach ArsenalBoxes;
 //------------------- Disable Arty Computer for all but FSG
 enableEngineArtillery false;
 if (player isKindOf "B_support_Mort_f") then {
@@ -45,35 +55,25 @@ player addEventHandler ["Fired", {
 //------------------ Respawn
 
 if ("derp_revive" in (getMissionConfigValue "respawnTemplates")) then {
-        if (getMissionConfigValue "derp_revive_everyoneCanRevive" == 0) then {
-            if (player getUnitTrait "medic") then {
-                call derp_revive_fnc_drawDowned;
-            };
-        } else {
-                call derp_revive_fnc_drawDowned;
-        };
-    };
-
-if (getMissionConfigValue "respawnOnStart" == -1) then {[player] call derp_revive_fnc_reviveActions};
-
-if ("derp_revive" in (getMissionConfigValue "respawnTemplates")) then {
-        if (getMissionConfigValue "derp_revive_everyoneCanRevive" == 0) then {
-            if (player getUnitTrait "medic") then {
-                call derp_revive_fnc_drawDowned;
-            };
-        } else {
-                call derp_revive_fnc_drawDowned;
-        };
-    };
+       if (getMissionConfigValue "derp_revive_everyoneCanRevive" == 0) then {
+           if (player getUnitTrait "medic") then {
+               call derp_revive_fnc_drawDowned;
+           };
+       } else {
+           call derp_revive_fnc_drawDowned;
+       };
+       call derp_revive_fnc_handleDamage;
+       if (getMissionConfigValue "respawnOnStart" == -1) then {[player] call derp_revive_fnc_reviveActions};
+   };
 
 
 //--------------------- Squad Url Hint
 /*
-_infoArray = squadParams player;    
+_infoArray = squadParams player;
 _infoSquad = _infoArray select 0;
 _squad = _infoSquad select 1;
 _infoName = _infoArray select 1;
-_name = _infoName select 1; 
+_name = _infoName select 1;
 _email = _infoSquad select 2;
 
 
