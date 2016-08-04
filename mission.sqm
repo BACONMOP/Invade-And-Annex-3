@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2195.0232,85.578354,3442.4063};
-		dir[]={-0.7242344,-0.68207765,-0.10216344};
-		up[]={-0.67546183,0.73122501,-0.095282733};
-		aside[]={-0.13968876,5.2619725e-007,0.9902823};
+		pos[]={2140.3677,42.347721,3456.6846};
+		dir[]={-0.7442463,-0.55675852,-0.36920187};
+		up[]={-0.4988507,0.83061647,-0.24746688};
+		aside[]={-0.44443372,-2.3387838e-007,0.89591157};
 	};
 };
 binarizationWanted=0;
@@ -10676,7 +10676,7 @@ class Mission
 							side="Empty";
 							class Attributes
 							{
-								init="this allowDamage false;   " \n "this enableSimulation false;   " \n "this addAction [""<t color='#ff1111'>Activate Air-Defense</t>"",""scripts\misc\actions\airbaseDefense_switch.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5)'];   " \n "this addAction [""<t color='#3f3fff'>Recycle UAV crew</t>"",""scripts\misc\actions\uavFix_switch.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_soldier_UAV_F"")'];  this addAction [""<t color='#009ACD'>Teleport To Main Base</t>"",""[player,'base'] remoteExec ['AW_fnc_baseTeleport',2];""]; ";
+								init="this allowDamage false;    " \n "this enableSimulation false;    " \n "this addAction [""<t color='#ff1111'>Activate Air-Defense</t>"",""scripts\misc\actions\airbaseDefense_switch.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5)'];    " \n "this addAction [""<t color='#3f3fff'>Recycle UAV crew</t>"",""scripts\misc\actions\uavFix_switch.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_soldier_UAV_F"")']; " \n " this addAction [""<t color='#009ACD'>Teleport To Main Base</t>"",""[player,'BASE'] remoteExec ['AW_fnc_baseTeleport',2];""]; " \n " this addAction [""<t color='#009ACD'>Teleport To ROB Eagle</t>"",""[player,'Tuvanaka_Airbase'] remoteExec ['AW_fnc_baseTeleport',2];""]; " \n " this addAction [""<t color='#009ACD'>Teleport To FOB Fin</t>"",""[player,'Lijnhaven'] remoteExec ['AW_fnc_baseTeleport',2];""]; " \n " this addAction [""<t color='#009ACD'>Teleport To FOB Comms Bravo</t>"",""[player,'Abandoned_Mine'] remoteExec ['AW_fnc_baseTeleport',2];""]; " \n " this addAction [""<t color='#009ACD'>Teleport To FOB Terminus</t>"",""[player,'Int_Airport'] remoteExec ['AW_fnc_baseTeleport',2];""];";
 								name="maintenanceTerminal_1";
 							};
 							id=678;

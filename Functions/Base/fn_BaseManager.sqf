@@ -22,6 +22,11 @@ clearItemCargoGlobal _arsenal;
 clearWeaponCargoGlobal _arsenal;
 clearBackpackCargoGlobal _arsenal;
 [[_arsenal], ("ArsenalFilter" call BIS_fnc_getParamValue)] call derp_fnc_VA_filter;
+_arsenal addAction ["<t color='#009ACD'>Teleport To Main Base</t>","[player,'BASE'] remoteExec ['AW_fnc_baseTeleport',2];"];
+_arsenal addAction ["<t color='#009ACD'>Teleport To ROB Eagle</t>","[player,'Tuvanaka_Airbase'] remoteExec ['AW_fnc_baseTeleport',2];"];
+_arsenal addAction ["<t color='#009ACD'>Teleport To FOB Fin</t>","[player,'Lijnhaven'] remoteExec ['AW_fnc_baseTeleport',2];"];
+_arsenal addAction ["<t color='#009ACD'>Teleport To FOB Comms Bravo</t>","[player,'Abandoned_Mine'] remoteExec ['AW_fnc_baseTeleport',2];"];
+_arsenal addAction ["<t color='#009ACD'>Teleport To FOB Terminus</t>","[player,'Int_Airport'] remoteExec ['AW_fnc_baseTeleport',2];"];
 
 // Markers ----------------------------------------
 

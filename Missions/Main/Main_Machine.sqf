@@ -5,7 +5,6 @@
  *
  */
 jetCounter = 0;
-controlledZones = [];
 currentAO = "BASE";
 controlledZones pushBack currentAO;
 
