@@ -1,5 +1,11 @@
+/*
+Author: BACONMOP
+Description: Defines MAin Ao's n shiz
+Contributors: Zissou & Pero
+*/
+
 class AOs{
-	
+
 	class Imuri_Island {
 		name =  "Imuri Island";
 		nearlocations[]={
@@ -23,7 +29,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class base {
 		name =  "Base";
 		nearlocations[]={
@@ -230,7 +236,7 @@ class AOs{
 			"La_Rochelle",
 			"Penelo",
 			"La_Rochelle_Aerodome",
-			"Blue_Pearl_industrial_Port" 
+			"Blue_Pearl_industrial_Port"
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -534,7 +540,7 @@ class AOs{
 			"Nasau",
 			"Blue_Pearl_industrial_Port",
 			"Red_Spring",
-			"Penelo" 
+			"Penelo"
 		};
 		type = "Base";
 		respawnPos = "mine_pl_res";
@@ -606,7 +612,7 @@ class AOs{
 			"Galili",
 			"Penelo",
 			"La_Rochelle",
-			"Blue_Pearl_industrial_Port" 
+			"Blue_Pearl_industrial_Port"
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -618,7 +624,7 @@ class AOs{
 			"Abandoned_Mine",
 			"Dr_Venkman_Observatory",
 			"Penelo",
-			"Mount_Tanoa" 
+			"Mount_Tanoa"
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -632,7 +638,7 @@ class AOs{
 			"Nasau",
 			"La_Rochelle_Aerodome",
 			"La_Rochelle",
-			"Penelo" 
+			"Penelo"
 		};
 		type = "Outpost";
 		vehicles[] = {};

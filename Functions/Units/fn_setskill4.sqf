@@ -1,3 +1,6 @@
+/*
+Author: QuickSilver
+*/
 {
 	_x setSkill ["aimingAccuracy", 1];
 	_x setSkill ["aimingShake", 1];

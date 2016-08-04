@@ -73,6 +73,7 @@ class AW
 	{
 		file = "functions\Base";
 		class BaseManager {};
+        class baseTeleport {};
 	};
 
 	class miscFunctions
@@ -93,6 +94,7 @@ class AW
 		class addactiongetintel {};
 		class addactionsurrender {};
 		class taskPatrol {};
+        class smSucSwitch {};
 	};
 };
 
@@ -126,6 +128,11 @@ class derp
         class AISkill {};
         class AIOccupyBuilding {};
 		class arrayShuffle {};
+    };
+
+	class Revive {
+        file = "functions\revive";
+        class syncAnim {};
     };
 };
 

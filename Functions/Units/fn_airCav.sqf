@@ -1,4 +1,6 @@
 /*
+Author: BACONMOP
+Description: Create Air Cav reinforce
 factions: paraMil, bandits, FIAIndep, AAF, CSAT, CSATTropic, FIAOpfor, NATO, NATOTropic, FIABlufor, CTRG
 [currentAO, "base", "paraMil"] call AW_fnc_airCav;
 */
@@ -30,7 +32,7 @@ switch(_faction) do{
 		_heliGrp = createGroup Resistance;
 		_GRP1 = createGroup Resistance;
 		_ambientHeli = createVehicle [_heli, getMarkerPos _startPos, [], 0, "FLY" ];
-		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;		
+		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;
 		_squadSize = _ambientHeli emptyPositions "cargo";
 		private ["_unit"];
 		for "_i" from 1 to _squadSize do {
@@ -60,7 +62,7 @@ switch(_faction) do{
 		_heliGrp = createGroup Resistance;
 		_GRP1 = createGroup Resistance;
 		_ambientHeli = createVehicle [_heli, getMarkerPos _startPos, [], 0, "FLY" ];
-		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;		
+		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;
 		_squadSize = _ambientHeli emptyPositions "cargo";
 		private ["_unit"];
 		for "_i" from 1 to _squadSize do {
@@ -90,7 +92,7 @@ switch(_faction) do{
 		_heliGrp = createGroup Resistance;
 		_GRP1 = createGroup Resistance;
 		_ambientHeli = createVehicle [_heli, getMarkerPos _startPos, [], 0, "FLY" ];
-		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;		
+		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;
 		_squadSize = _ambientHeli emptyPositions "cargo";
 		private ["_unit"];
 		for "_i" from 1 to _squadSize do {
@@ -120,7 +122,7 @@ switch(_faction) do{
 		_heliGrp = createGroup Resistance;
 		_GRP1 = createGroup Resistance;
 		_ambientHeli = createVehicle [_heli, getMarkerPos _startPos, [], 0, "FLY" ];
-		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;		
+		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;
 		_squadSize = _ambientHeli emptyPositions "cargo";
 		private ["_unit"];
 		for "_i" from 1 to _squadSize do {
@@ -150,7 +152,7 @@ switch(_faction) do{
 		_heliGrp = createGroup East;
 		_GRP1 = createGroup East;
 		_ambientHeli = createVehicle [_heli, getMarkerPos _startPos, [], 0, "FLY" ];
-		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;		
+		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;
 		_squadSize = _ambientHeli emptyPositions "cargo";
 		private ["_unit"];
 		for "_i" from 1 to _squadSize do {
@@ -180,7 +182,7 @@ switch(_faction) do{
 		_heliGrp = createGroup East;
 		_GRP1 = createGroup East;
 		_ambientHeli = createVehicle [_heli, getMarkerPos _startPos, [], 0, "FLY" ];
-		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;		
+		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;
 		_squadSize = _ambientHeli emptyPositions "cargo";
 		private ["_unit"];
 		for "_i" from 1 to _squadSize do {
@@ -210,7 +212,7 @@ switch(_faction) do{
 		_heliGrp = createGroup East;
 		_GRP1 = createGroup East;
 		_ambientHeli = createVehicle [_heli, getMarkerPos _startPos, [], 0, "FLY" ];
-		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;		
+		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;
 		_squadSize = _ambientHeli emptyPositions "cargo";
 		private ["_unit"];
 		for "_i" from 1 to _squadSize do {
@@ -240,7 +242,7 @@ switch(_faction) do{
 		_heliGrp = createGroup West;
 		_GRP1 = createGroup West;
 		_ambientHeli = createVehicle [_heli, getMarkerPos _startPos, [], 0, "FLY" ];
-		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;		
+		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;
 		_squadSize = _ambientHeli emptyPositions "cargo";
 		private ["_unit"];
 		for "_i" from 1 to _squadSize do {
@@ -270,7 +272,7 @@ switch(_faction) do{
 		_heliGrp = createGroup West;
 		_GRP1 = createGroup West;
 		_ambientHeli = createVehicle [_heli, getMarkerPos _startPos, [], 0, "FLY" ];
-		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;		
+		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;
 		_squadSize = _ambientHeli emptyPositions "cargo";
 		private ["_unit"];
 		for "_i" from 1 to _squadSize do {
@@ -300,7 +302,7 @@ switch(_faction) do{
 		_heliGrp = createGroup West;
 		_GRP1 = createGroup West;
 		_ambientHeli = createVehicle [_heli, getMarkerPos _startPos, [], 0, "FLY" ];
-		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;		
+		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;
 		_squadSize = _ambientHeli emptyPositions "cargo";
 		private ["_unit"];
 		for "_i" from 1 to _squadSize do {
@@ -330,7 +332,7 @@ switch(_faction) do{
 		_heliGrp = createGroup West;
 		_GRP1 = createGroup West;
 		_ambientHeli = createVehicle [_heli, getMarkerPos _startPos, [], 0, "FLY" ];
-		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;		
+		[_ambientHeli,_heliGrp] call BIS_fnc_spawnCrew;
 		_squadSize = _ambientHeli emptyPositions "cargo";
 		private ["_unit"];
 		for "_i" from 1 to _squadSize do {

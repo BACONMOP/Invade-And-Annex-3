@@ -1,4 +1,5 @@
 /*
+Author: BACONMOP
 side mission defend police
 */
 
@@ -33,7 +34,7 @@ for "_i" from 0 to _squadSize do {
 // Briefing ----------------------------
 
 _fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
-{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];		
+{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];
 sideMarkerText = "Police Protect";
 "sideMarker" setMarkerText "Side Mission: Protect U.N. Police Force";
 _briefing = "<t align='center'><t size='2.2'>New Side Mission</t><br/><t size='1.5' color='#00B2EE'>Protect U.N. Police Force</t><br/>____________________<br/>Undercover agents have provided Intel that rebel forces are planning to attack a U.N. Police Force. We have the approximate location the the police force. Get over there and protect the police.</t>";
@@ -86,7 +87,11 @@ waitUntil{sleep 5; (({alive _x} count (units _grp1)) < 1 || (({alive _x} count (
 if (({alive _x} count (units _grp1)) < 1) then {
 	hqSideChat = "The police force has been wiped out! Mission FAILED!";
 	[hqSideChat] remoteExec ["AW_fnc_globalSideChat",0,false];
+	{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"];
+	["CompletedSideMission", "Protect U.N. Police Force"] remoteExec ["AW_fnc_globalNotification",0,false];
 	//[] spawn AW_fnc_SMhintFAIL;
+	_briefing = "<t align='center'><t size='2.2'>Mission FAILED</t><br/><t size='1.5' color='#00B2EE'>Protect U.N. Police Force</t><br/>____________________<br/>The police force has been wiped out. I expected better from you.</t>";
+	[_briefing] remoteExec ["AW_fnc_globalHint",0,false];
 };
 if (({alive _x} count (units _grp2)) < 1) then {
 	sideMissionUp = false;

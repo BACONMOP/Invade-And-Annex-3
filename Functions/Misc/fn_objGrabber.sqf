@@ -1,4 +1,8 @@
-
+/*
+Author: BIS
+Modified by: BACONMOP
+modified to copy more objects than the original scritp
+*/
 private ["_anchorPos", "_anchorDim", "_grabOrientation"];
 _anchorPos = _this param [0, [0, 0], [[]]];
 _anchorDim = _this param [1, 50, [-1]];
@@ -26,7 +30,7 @@ _outputText = _outputText + "[" + _br;
 	//Exclude non-dynamic objects (world objects)
 	private ["_allDynamic"];
 	_allDynamic = allMissionObjects "All";
-	
+
 
 } forEach _objs;
 
@@ -50,7 +54,7 @@ _objs = _objs - [-1];
 	//TODO: re-enable once 3D editor simulation is fixed
 	//_simulation = simulationEnabled _x;
 	_simulation = _x getVariable ["simulation", true];
-	
+
 	_replaceBy = _x getVariable ["replaceBy", ""];
 	if (_replaceBy != "") then {_type = _replaceBy;};
 

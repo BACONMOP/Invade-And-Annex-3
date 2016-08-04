@@ -46,7 +46,7 @@
 		color[] = {1, 0.81, 0.06, 1};
 		priority = 9;
 	};
-	
+
 	class FailedMainDefended
 	{
 		title = "OBJECTIVE LOST";
@@ -155,7 +155,7 @@
 		color[] = {0.38, 0.81, 0.16, 1};
 		priority = 5;
 	};
-	
+
 	class baseTaken
 	{
 		title = "NEW BASE CAPTURED";
@@ -165,7 +165,7 @@
 		color[] = {0.38, 0.81, 0.16, 1};
 		priority = 9;
 	};
-	
+
 	class baseLost
 	{
 		title = "BASE LOST";

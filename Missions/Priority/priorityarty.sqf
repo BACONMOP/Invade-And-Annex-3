@@ -15,7 +15,7 @@ Description:
 __________________________________________________________________________*/
 
 private ["_flatPos","_accepted","_position","_flatPos1","_flatPos2","_flatPos3","_PTdir","_unitsArray","_priorityGroup","_distance","_dir","_c","_pos","_barrier","_enemiesArray","_radius","_unit","_targetPos","_firingMessages","_fuzzyPos","_briefing","_completeText","_priorityMan1","_priorityMan2"];
-
+private _spawnedUnits = [];
 //-------------------- 1. FIND POSITION
 
 	_flatPos = [0,0,0];
@@ -81,8 +81,6 @@ private ["_flatPos","_accepted","_position","_flatPos1","_flatPos2","_flatPos3",
 	_priorityGroup setCombatMode "RED";
 	_priorityGroup allowFleeing 0;
 
-	_unitsArray pushBack _priorityGroup;
-	_unitsArray pushBack _priorityGroup2;
 
 //-------------------- 4. SPAWN H-BARRIER RING
 
@@ -104,6 +102,22 @@ private ["_flatPos","_accepted","_position","_flatPos1","_flatPos2","_flatPos3",
 
 //-------------------- 5. SPAWN FORCE PROTECTION
 
+
+for "_x" from 1 to 5 do {
+    private _randomPos = [[[_flatPos, 300 * 1.2], []], ["water", "out"]] call BIS_fnc_randomPos;
+    private _infantryGroup = createGroup EAST;
+    for "_x" from 1 to 8 do {
+        _unitArray = (missionconfigfile >> "unitList" >> MainFaction >> "units") call BIS_fnc_getCfgData;
+        _unit = _unitArray call BIS_fnc_selectRandom;
+        _grpMember = _infantryGroup createUnit [_unit, _randomPos, [], 0, "FORM"];
+    };
+
+    [_infantryGroup, _flatPos, 300 / 1.6] call AW_FNC_taskPatrol;
+
+    {
+        _spawnedUnits pushBack _x;
+    } foreach (units _infantryGroup);
+};
 
 	sleep 1;
 
@@ -146,12 +160,10 @@ while { canMove priorityObj1 || canMove priorityObj2 } do {
 							if ((_targetPos distance (getMarkerPos "FOB_Comms_Bravo")) > 1000) then {
 								if ((_targetPos distance (getMarkerPos "FOB_International_Airport")) > 1000) then {
 									if ((_targetPos distance (getMarkerPos "FOB_International_Airport")) > 1000) then {
-										if (&& vehicle _unit == _unit) then {
-											if (side _unit == WEST) then {
-												_accepted = true;
-											} else {
-												sleep 7;																// default 10
-											};
+										if (side _unit == WEST) then {
+											_accepted = true;
+										} else {
+											sleep 7;																// default 10
 										};
 									sleep 3;
 									};
@@ -160,6 +172,8 @@ while { canMove priorityObj1 || canMove priorityObj2 } do {
 						};
 					};
 				};
+			};
+		};
 		_dir = [_flatPos, _targetPos] call BIS_fnc_dirTo;
 		{ _x setDir _dir; } forEach [priorityObj1, priorityObj2];
 
@@ -188,6 +202,7 @@ _completeText = "<t align='center' size='2.2'>Priority Target</t><br/><t size='1
 
 //-------------------- DELETE
 
-sleep 120;
-{ [_x] spawn AW_fnc_SMdelete } forEach [_enemiesArray,_unitsArray];
+sleep 6;
+{ deleteVehicle _x } forEach _unitsArray;
 { deleteVehicle _x } forEach [priorityObj1,priorityObj2,ammoTruck];
+{ deleteVehicle _x } foreach _spawnedUnits;

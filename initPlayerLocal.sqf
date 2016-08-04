@@ -1,6 +1,18 @@
+/*
+Author:
+
+	BACONMOP
+
+Description:
+
+	Things that may run on both server.
+	Deprecated initialization file.
+______________________________________________________*/
+
 enableSaving false;
 artySorcher allowDamage False;
 artyMLRS allowDamage False;
+enableSentences false;
 
 //------------------- client executions
 
@@ -49,6 +61,31 @@ player addEventHandler ["Fired", {
 		hintC "Don't goof at base. Hold your horses soldier, don't throw, fire or place anything inside the base.";
 	}}];
 
+player addEventHandler ["Fired", {
+	params ["_unit", "_weapon", "", "", "", "", "_projectile"];
+	if (_unit distance2D (getMarkerPos "FOB_Eagle") < 300) then {
+		deleteVehicle _projectile;
+		hintC "Don't goof at base. Hold your horses soldier, don't throw, fire or place anything inside the base.";
+	}}];
+
+player addEventHandler ["Fired", {
+	params ["_unit", "_weapon", "", "", "", "", "_projectile"];
+	if (_unit distance2D (getMarkerPos "FOB_Fin") < 300) then {
+		deleteVehicle _projectile;
+		hintC "Don't goof at base. Hold your horses soldier, don't throw, fire or place anything inside the base.";
+	}}];
+player addEventHandler ["Fired", {
+	params ["_unit", "_weapon", "", "", "", "", "_projectile"];
+	if (_unit distance2D (getMarkerPos "FOB_Comms_Bravo") < 300) then {
+		deleteVehicle _projectile;
+		hintC "Don't goof at base. Hold your horses soldier, don't throw, fire or place anything inside the base.";
+	}}];
+player addEventHandler ["Fired", {
+	params ["_unit", "_weapon", "", "", "", "", "_projectile"];
+	if (_unit distance2D (getMarkerPos "FOB_International_Airport") < 300) then {
+		deleteVehicle _projectile;
+		hintC "Don't goof at base. Hold your horses soldier, don't throw, fire or place anything inside the base.";
+	}}];
 //------------------ BIS groups
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 

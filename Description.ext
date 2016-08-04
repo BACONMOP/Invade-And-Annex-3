@@ -1,8 +1,8 @@
 //------------------------- On Load
 
 author = BACONMOP;					// Visible when loading mission
-onLoadName = "Invade & Annex 3 Beta Release 5";						// Visible when loading mission
-OnLoadMission = "Beta Release 5 for Invade And Annex 3.0.0 If you want to get involved with Ahoy World or development of Invade And Annex go to AhoyWorld.Net of join ts.AhoyWorld.Net";
+onLoadName = "Invade & Annex 3 Beta Release 6";						// Visible when loading mission
+OnLoadMission = "Beta Release 6 for Invade And Annex 3.0.0 If you want to get involved with Ahoy World or development of Invade And Annex go to AhoyWorld.Net or join ts.AhoyWorld.Net";
 loadScreen = "";				// Visible when loading mission
 overviewPicture = "";			// Visible when selecting mission
 

@@ -1,3 +1,7 @@
+/*
+    Author: Quicksilver
+*/
+
 private ["_obj"];
 {
 sleep 1;

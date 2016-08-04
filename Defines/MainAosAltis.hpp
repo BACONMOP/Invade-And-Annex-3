@@ -1,5 +1,11 @@
+/*
+Author: BACONMOP
+Description: Defines MAin Ao's n shiz
+Contributors: Zissou & Pero
+*/
+
 class AOs{
-	
+
 	class AAC_Airfield {
 		name =  "AAC Airfield";
 		nearlocations[]={
@@ -12,7 +18,7 @@ class AOs{
 		type = "Base";
 		respawnPos = "aac_pl_res";
 		visMrkr = "FOB_Martian";
-		vehicles[] = 
+		vehicles[] =
 		{
 			{"I_Plane_Fighter_03_AA_F", "aac_jet_spawn",1800},
 			{"I_Heli_light_03_unarmed_F", "aac_heli1",450},
@@ -26,8 +32,8 @@ class AOs{
 			{"B_APC_Tracked_01_AA_F", "aac_veh6",1200}
 		};
 	};
-	
-	
+
+
 	class Base {
 		name =  "Camp Landfell";
 		nearlocations[]={
@@ -36,8 +42,8 @@ class AOs{
 		};
 		type = "MainBase";
 		vehicles[] = {};
-	};	
-	
+	};
+
 	class Skopos {
 		name =  "Skopos";
 		nearlocations[]={
@@ -49,7 +55,7 @@ class AOs{
 		type = "Hill";
 		vehicles[] = {};
 	};
-	
+
 	class Cap_Makrinos {
 		name =  "Cap Makrinos";
 		nearlocations[]={
@@ -61,7 +67,7 @@ class AOs{
 		type = "Coastline";
 		vehicles[] = {};
 	};
-	
+
 	class Castle_Ruins {
 		name =  "Castle Ruins";
 		nearlocations[]={
@@ -74,7 +80,7 @@ class AOs{
 		type = "Hill";
 		vehicles[] = {};
 	};
-	
+
 	class Vikos_Outpost {
 		name =  "Vikos Outpost";
 		nearlocations[]={
@@ -86,7 +92,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Melanera_Bay {
 		name =  "Melanera Bay";
 		nearlocations[]={
@@ -101,7 +107,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Therisa {
 		name =  "Therisa";
 		nearlocations[]={
@@ -114,7 +120,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Zaros {
 		name =  "Zaros";
 		nearlocations[]={
@@ -127,7 +133,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Zaros_PowerPlant {
 		name =  "Zaros Power Plant";
 		nearlocations[]={
@@ -140,7 +146,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Edessa {
 		name =  "Edessa";
 		nearlocations[]={
@@ -167,7 +173,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Panochori_Bay {
 		name =  "Panochori Bay";
 		nearlocations[]={
@@ -175,12 +181,12 @@ class AOs{
 			"Athanos",
 			"Neri",
 			"Neri_Bay"
-			
+
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Athanos {
 		name =  "Athanos";
 		nearlocations[]={
@@ -193,7 +199,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Neri_Bay {
 		name =  "Neri_Bay";
 		nearlocations[]={
@@ -206,7 +212,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Neri {
 		name =  "Neri";
 		nearlocations[]={
@@ -220,19 +226,19 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Quarry {
 		name =  "Quarry";
 		nearlocations[]={
 			"Panochori",
-			"Neri_Bay",		
+			"Neri_Bay",
 			"A_Dump",
 			"Aggelochori_Outskirts"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class A_Dump {
 		name =  "A Dump";
 		nearlocations[]={
@@ -241,12 +247,12 @@ class AOs{
 			"Edessa",
 			"Aggelochori_Outskirts",
 			"Panochori"
-			
+
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Aggelochori_Outskirts {
 		name =  "Aggelochori Outskirts";
 		nearlocations[]={
@@ -259,7 +265,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Aggelorchori_Factory {
 		name =  "Aggelorchori Factory";
 		nearlocations[]={
@@ -271,7 +277,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Stadium {
 		name =  "Stadium";
 		nearlocations[]={
@@ -285,7 +291,7 @@ class AOs{
 		type = "Base";
 		respawnPos = "sdm_pl_res";
 		visMrkr = "FOB_Marathon";
-		vehicles[] = 
+		vehicles[] =
 		{
 			{"B_Heli_Light_01_armed_F", "sdm_heli1",1200},
 			{"B_Heli_Light_01_F", "sdm_heli2",1200},
@@ -297,7 +303,7 @@ class AOs{
 			{"O_APC_Tracked_02_cannon_F", "sdm_veh6",600}
 		};
 	};
-	
+
 	class Power_Plant {
 		name =  "Power Plant";
 		nearlocations[]={
@@ -309,7 +315,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Negadas {
 		name =  "Negadas";
 		nearlocations[]={
@@ -322,7 +328,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Kira {
 		name =  "Kira";
 		nearlocations[]={
@@ -334,7 +340,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Agios_Konstantinos {
 		name =  "Agios_Konstantinos";
 		nearlocations[]={
@@ -347,7 +353,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Agios_Konstantinos_Turbines {
 		name =  "Agios Konstantinos Turbines";
 		nearlocations[]={
@@ -360,7 +366,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Oreokastro {
 		name =  "Oreokastro";
 		nearlocations[]={
@@ -373,7 +379,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Synneforos {
 		name =  "Synneforos";
 		nearlocations[]={
@@ -386,7 +392,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Faros {
 		name =  "Faros";
 		nearlocations[]={
@@ -400,7 +406,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Abdera_Airstrip {
 		name =  "Abdera Airstrip";
 		nearlocations[]={"Synneforos",
@@ -413,7 +419,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Adbera_Turbines {
 		name =  "Adbera Turbines";
 		nearlocations[]={
@@ -449,7 +455,7 @@ class AOs{
 		type = "Base";
 		respawnPos = "Sel_pl_res";
 		visMrkr = "FOB_Dirt_Track";
-		vehicles[] = 
+		vehicles[] =
 		{
 			{"O_Heli_Attack_02_black_F", "sel_heli1",5400},
 			{"B_Heli_Transport_03_F", "sel_heli2",300},
@@ -468,7 +474,7 @@ class AOs{
 			"Selakano_Town",
 			"Panagia_Town",
 			"Livadi_Bay"
-		
+
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -482,7 +488,7 @@ class AOs{
 			"Aktinarki",
 			"Didymos_Valley",
 			"Faronaki_Col"
-			
+
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -509,7 +515,7 @@ class AOs{
 			"Faronaki_Col",
 			"Livadi_Bay",
 			"Panagia_Town",
-			"Faronaki_Quarry"	
+			"Faronaki_Quarry"
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -549,7 +555,7 @@ class AOs{
 			"Pyrgos_Town",
 			"Faronaki_Col",
 			"Chalkeia"
-			
+
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -562,7 +568,7 @@ class AOs{
 			"Didymos_Plain",
 			"Aktinarki",
 			"Chalkeia"
-			
+
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -586,7 +592,7 @@ class AOs{
 			"Cap_Kategidis",
 			"Faronaki_Col",
 			"Dorida"
-			
+
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -630,7 +636,7 @@ class AOs{
 			"Chelonisi",
 			"Chalkeia",
 			"Pyrgos_Town",
-			
+
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -659,11 +665,11 @@ class AOs{
 			"Charkia",
 			"Charkia_Mine",
 			"Dorida"
-			
+
 		};
 		type = "Outpost";
-		vehicles[] = {}; 
-		
+		vehicles[] = {};
+
 	};class Cap_Thelos {
 		name =  "Cap Thelos";
 		nearlocations[]={
@@ -687,7 +693,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Charkia {
 		name =  "Charkia";
 		nearlocations[]={
@@ -730,7 +736,7 @@ class AOs{
 			"Salt_Flats_North",
 			"Salt_Flats_South",
 			"Cap_Thelos"
-			
+
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -859,7 +865,7 @@ class AOs{
 		type = "Base";
 		respawnPos = "mol_pl_res";
 		visMrkr = "FOB_Last_Stand";
-		vehicles[] = 
+		vehicles[] =
 		{
 			{"B_Plane_CAS_01_F", "mol_jet_spawn",5400},
 			{"B_Heli_Light_01_F", "mol_heli1",600},
@@ -891,7 +897,7 @@ class AOs{
 			"Molos_Town",
 			"Cap_Strigla",
 			"Limnichori"
-			
+
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -1319,7 +1325,7 @@ class AOs{
 			"Xirolimni_Dam",
 			"Stadium",
 			"Zaros"
-			
+
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -1372,7 +1378,7 @@ class AOs{
 		type = "Base";
 		respawnPos = "term_pl_res";
 		visMrkr = "FOB_Guardian";
-		vehicles[] = 
+		vehicles[] =
 		{
 			{"B_Heli_Light_01_F", "term_heli1",1200},
 			{"B_Heli_Attack_01_F", "term_heli2",5400},

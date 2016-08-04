@@ -16,7 +16,7 @@ switch (_type) do{
 	
 	case "Sorcher":{
 		_allScore = score player;
-		if (_allScore >= 5) then {
+		if (_allScore >= 75) then {
 			player addAction ["Sorcher Strike","_pos = screenToWorld [.5,.5];[artySorcher,_pos] remoteExec ['AW_fnc_artyStrike',2];_supportAddaction = _this select 2;player removeAction _supportAddaction;"];
 			_unit = player;
 			[_unit,-75] remoteExec ["addScore",0];
@@ -27,7 +27,7 @@ switch (_type) do{
 	
 	case "MLRS":{
 		_allScore = score player;
-		if (_allScore >= 10) then {
+		if (_allScore >= 150) then {
 			player addAction ["MLRS Strike","_pos = screenToWorld [.5,.5];[artyMLRS,_pos] remoteExec ['AW_fnc_artyStrike',2];_supportAddaction = _this select 2;player removeAction _supportAddaction;"];
 			_unit = player;
 			[_unit,-150] remoteExec ["addScore",0];
@@ -38,7 +38,7 @@ switch (_type) do{
 	
 	case "Gun":{
 		_allScore = score player;
-		if (_allScore >= 15) then {
+		if (_allScore >= 90) then {
 			player addAction ["CAS Strike: Gun Run","_pos = screenToWorld [.5,.5];[_pos,random 360,'B_Plane_CAS_01_F',0] remoteExec ['AW_fnc_createCas',2];_supportAddaction = _this select 2;player removeAction _supportAddaction;"];
 			_unit = player;
 			[_unit,-90] remoteExec ["addScore",0];
@@ -49,7 +49,7 @@ switch (_type) do{
 	
 	case "Rocket":{
 		_allScore = score player;
-		if (_allScore >= 20) then {
+		if (_allScore >= 110) then {
 			player addAction ["CAS Strike: Rocket Strike","_pos = screenToWorld [.5,.5];[_pos,random 360,'B_Plane_CAS_01_F',1] remoteExec ['AW_fnc_createCas',2];_supportAddaction = _this select 2;player removeAction _supportAddaction;"];
 			_unit = player;
 			[_unit,-110] remoteExec ["addScore",0];
@@ -60,7 +60,7 @@ switch (_type) do{
 	
 	case "GunRocket":{
 		_allScore = score player;
-		if (_allScore >= 25) then {
+		if (_allScore >= 130) then {
 			player addAction ["CAS Strike: Guns and Rockets","_pos = screenToWorld [.5,.5];[_pos,random 360,'B_Plane_CAS_01_F',2] remoteExec ['AW_fnc_createCas',2];_supportAddaction = _this select 2;player removeAction _supportAddaction;"];
 			_unit = player;
 			[_unit,-130] remoteExec ["addScore",0];

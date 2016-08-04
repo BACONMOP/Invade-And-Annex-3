@@ -1,5 +1,11 @@
+/*
+Author: BACONMOP
+Description: Defines MAin Ao's n shiz
+Contributors: Zissou & Pero
+*/
+
 class AOs{
-	
+
 	class Imuri_Island {
 		name =  "Imuri Island";
 		nearlocations[]={
@@ -24,7 +30,7 @@ class AOs{
 		type = "Outpost";
 		vehicles[] = {};
 	};
-	
+
 	class Bala_Airstrip {
 		name =  "Bala Airstrip";
 		nearlocations[]={
@@ -207,9 +213,9 @@ class AOs{
 	class Arch_Of_The_Spartans {
 		name =  "Arch Of The Spartans";
 		nearlocations[]={
-			"Ipota" 
+			"Ipota"
 			"Vehicle_Range"
-			"La_Rochelle" 
+			"La_Rochelle"
 			"Penelo"
 			"La_Rochelle_Aerodome"
 		};
@@ -220,10 +226,10 @@ class AOs{
 		name =  "Ipota";
 		nearlocations[]={
 			"Vehicle_Range"
-			"La_Rochelle" 
+			"La_Rochelle"
 			"Penelo"
 			"La_Rochelle_Aerodome"
-			"Blue_Pearl_industrial_Port" 
+			"Blue_Pearl_industrial_Port"
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -277,7 +283,7 @@ class AOs{
 		name =  "Moddergat";
 		nearlocations[]={
 			"Lijnhaven"
-			"Girz_Pass"			
+			"Girz_Pass"
 			"Doodstil"
 			"Harcourt"
 			"Marsh_Of_The_Muck_Duck"
@@ -293,7 +299,7 @@ class AOs{
 		name =  "Harcourt";
 		nearlocations[]={
 			"Lijnhaven"
-			"Girz_Pass"			
+			"Girz_Pass"
 			"Doodstil"
 			"Marsh_Of_The_Muck_Duck"
 			"KatKoula"
@@ -309,7 +315,7 @@ class AOs{
 		name =  "Doodstil";
 		nearlocations[]={
 			"Lijnhaven"
-			"Girz_Pass"			
+			"Girz_Pass"
 			"Doodstil"
 			"Marsh_Of_The_Muck_Duck"
 			"KatKoula"
@@ -325,7 +331,7 @@ class AOs{
 	class Girz_Pass {
 		name =  "Girz Pass";
 		nearlocations[]={
-			"Lijnhaven"	
+			"Lijnhaven"
 			"Doodstil"
 			"Marsh_Of_The_Muck_Duck"
 			"KatKoula"
@@ -378,7 +384,7 @@ class AOs{
 	class Pero_del_Pero {
 		name =  "Pero del Pero";
 		nearlocations[]={
-			"Blue_Pearl_industrial_Port" 
+			"Blue_Pearl_industrial_Port"
 			"Oumere"
 			"Temple_of_the_Dingo"
 			"Red_Spring"
@@ -404,10 +410,10 @@ class AOs{
 		name =  "Red Spring";
 		nearlocations[]={
 			"Tiger_Jungle"
-			"Blue_Pearl_industrial_Port" 
+			"Blue_Pearl_industrial_Port"
 			"Abandoned_Mine"
-			"Nasau" 
-			"Mount_Tanoa" 
+			"Nasau"
+			"Mount_Tanoa"
             "Dr_Venkman_Observatory"
 		};
 		type = "Outpost";
@@ -440,10 +446,10 @@ class AOs{
 	class Tiger_Jungle {
 		name =  "Tiger Jungle";
 		nearlocations[]={
-			"Blue_Pearl_industrial_Port" 
-			"Ipota" 
-			"La_Rochelle_Aerodome" 
-			"Nasau" 
+			"Blue_Pearl_industrial_Port"
+			"Ipota"
+			"La_Rochelle_Aerodome"
+			"Nasau"
 			"Abandoned_Mine"
 		};
 		type = "Outpost";
@@ -515,10 +521,10 @@ class AOs{
 		name =  "Abandoned Mine";
 		nearlocations[]={
 			"Tiger_Jungle"
-			"Nasau" 
+			"Nasau"
 			"Blue_Pearl_industrial_Port"
 			"Red_Spring"
-			"Penelo" 
+			"Penelo"
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -526,11 +532,11 @@ class AOs{
 	class Dr_Venkman_Observatory {
 		name =  "Dr Venkman Observatory";
 		nearlocations[]={
-			"Mount_Tanoa" 
+			"Mount_Tanoa"
 			"Galili"
 			"Abandoned_Mine"
-			"La_Rochelle_Aerodome" 
-			"La_Rochelle" 
+			"La_Rochelle_Aerodome"
+			"La_Rochelle"
 			"Penelo"
 		};
 		type = "Outpost";
@@ -542,8 +548,8 @@ class AOs{
 			"Dr_Venkman_Observatory"
 			"Abandoned_Mine"
 			"Galili"
-			"La_Rochelle_Aerodome" 
-			"La_Rochelle" 
+			"La_Rochelle_Aerodome"
+			"La_Rochelle"
 			"Penelo"
 		};
 		type = "Outpost";
@@ -552,10 +558,10 @@ class AOs{
 	class Penelo {
 		name =  "Penelo";
 		nearlocations[]={
-			"Nasau" 
-			"La_Rochelle_Aerodome" 
-			"La_Rochelle" 
-			"Ipota" 
+			"Nasau"
+			"La_Rochelle_Aerodome"
+			"La_Rochelle"
+			"Ipota"
 			"Arch_Of_The_Spartans"
 		};
 		type = "Outpost";
@@ -565,7 +571,7 @@ class AOs{
 		name =  "La Rochelle";
 		nearlocations[]={
 			"Arch_Of_The_Spartans"
-			"Ipota" 
+			"Ipota"
 			"Galili"
 			"Penelo"
 			"La_Rochelle_Aerodome"
@@ -577,11 +583,11 @@ class AOs{
 		name =  "La Rochelle Aerodome";
 		nearlocations[]={
 			"Arch_Of_The_Spartans"
-			"Ipota" 
+			"Ipota"
 			"Galili"
 			"Penelo"
 			"La_Rochelle"
-			"Blue_Pearl_industrial_Port" 
+			"Blue_Pearl_industrial_Port"
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -592,8 +598,8 @@ class AOs{
 			"Tiger_Jungle"
 			"Abandoned_Mine"
 			"Dr_Venkman_Observatory"
-			"Penelo" 
-			"Mount_Tanoa" 
+			"Penelo"
+			"Mount_Tanoa"
 		};
 		type = "Outpost";
 		vehicles[] = {};
@@ -604,13 +610,11 @@ class AOs{
 			"Pero_del_Pero"
 			"Red_Spring"
 			"Tiger_Jungle"
-			"Nasau" 
-			"La_Rochelle_Aerodome" 
-			"La_Rochelle" 
-			"Penelo" 
+			"Nasau"
+			"La_Rochelle_Aerodome"
+			"La_Rochelle"
+			"Penelo"
 		};
 		type = "Outpost";
 		vehicles[] = {};
 	};
-
-	

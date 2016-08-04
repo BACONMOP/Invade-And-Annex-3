@@ -1,5 +1,6 @@
 
 /*
+    Author: alganthe
     This file is where all the enemies and objects are going to be defined (the ones from the missions / SM) at least.
     Please keep the format of the defines as is, if a define is an array keep it an array.
 */

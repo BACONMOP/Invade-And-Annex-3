@@ -30,7 +30,12 @@ publicVariable "mapCent";
 
 artySorcher allowFleeing 0;
 artyMLRS allowFleeing 0;
-
+addMissionEventHandler ["HandleDisconnect", {
+    _this params ["_unit", "", "", "_name"];
+    if ("derp_revive" in (getMissionConfigValue "respawnTemplates")) then {
+        _unit setVariable ["derp_revive_downed", false, true];
+    };
+}];
 sleep 10;
 execVM "Missions\Main\Main_Machine.sqf";																// Main Aos
 //execVM "scripts\Encampments.sqf";																		// AA Encampments

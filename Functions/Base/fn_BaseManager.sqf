@@ -2,7 +2,7 @@
  * Author: BACONMOP
  * For new Spawned bases
  *
- * 
+ *
  */
 
 _base = _this select 0;
@@ -21,7 +21,7 @@ _arsenal = "B_CargoNet_01_ammo_F" createVehicle (getMarkerPos _baseRespawnMarker
 clearItemCargoGlobal _arsenal;
 clearWeaponCargoGlobal _arsenal;
 clearBackpackCargoGlobal _arsenal;
-[[_arsenal], 1] call derp_fnc_VA_filter;
+[[_arsenal], ("ArsenalFilter" call BIS_fnc_getParamValue)] call derp_fnc_VA_filter;
 
 // Markers ----------------------------------------
 
